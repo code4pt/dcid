@@ -1,14 +1,16 @@
 ## NOW!
 
 - Sample_app functionality: rspec tests
-- Create basic data model
+- Data Model: create User
+- Data Model: create Proposal
+- User authentication
 
-~~- Sample_app functionality: Refactor rspec~~
+~~- Data Model: User~~
 
 
 ## Backlog
 
-- Import dcid-bootstrap look from previous attempts
+- Import dcid-bootstrap complete look from previous attempts
 
 
 ## Ideabox / Nice to have
