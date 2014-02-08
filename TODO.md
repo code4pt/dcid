@@ -1,11 +1,9 @@
 ## NOW!
 
 - Sample_app functionality: rspec tests
-~~- Sample_app functionality: views~~
-~~- Sample_app functionality: dynamic titles~~
-~~- Sample_app functionality: composition of views~~
-~~- Sample_app functionality: bootstrap~~
 - Create basic data model
+
+~~ - Sample_app functionality: Named routes~~
 
 
 ## Backlog
