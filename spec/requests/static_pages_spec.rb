@@ -1,24 +1,20 @@
 require 'spec_helper'
 
 describe "Static pages" do
+  subject { page }
 
   describe "Home page" do
+    before { visit root_path }    
 
-    it "should have the content 'DCID'" do
-      visit root_path
-      expect(page).to have_content('DCID')
-    end    
+    it { should have_content('DCID') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('DCID |') }
   end
 
   describe "About page" do
-    
-    it "should have the content 'DCID'" do
-      visit about_path
-      expect(page).to have_content('DCID')
-    end
-    it "should have the base title plus a custom title" do
-      visit about_path
-      expect(page).to have_title('DCID | Sobre nós')
-    end    
+    before { visit about_path }
+
+    it { should have_content('DCID') }
+    it { should have_title(full_title('Sobre nós')) }
   end
 end
