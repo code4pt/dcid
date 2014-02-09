@@ -1,0 +1,562 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"citi",
+				"citizen_number"
+			],
+			[
+				"ci",
+				"citizen_number"
+			],
+			[
+				"ha",
+				"have_title"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "TODO.md",
+			"settings":
+			{
+				"buffer_size": 227,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/requests/user_pages_spec.rb",
+			"settings":
+			{
+				"buffer_size": 243,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/user_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1972,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 458,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"soda",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/dialex/Documents/rails_projects/dcid/app/views/users/new.html.erb",
+		"/home/dialex/Documents/rails_projects/dcid/db/migrate/20140208182124_create_users.rb",
+		"/home/dialex/Documents/rails_projects/dcid/config/database.yml",
+		"/home/dialex/Documents/rails_projects/dcid/db/development.sqlite3",
+		"/home/dialex/Documents/rails_projects/dcid/app/views/layouts/_header.html.erb",
+		"/home/dialex/Documents/rails_projects/dcid/Gemfile",
+		"/home/dialex/Documents/rails_projects/dcid/app/models/User.rb",
+		"/home/dialex/Documents/rails_projects/dcid/.git/COMMIT_EDITMSG",
+		"/home/dialex/Documents/rails_projects/dcid/app/views/static_pages/home.html.erb",
+		"/home/dialex/Documents/rails_projects/dcid/app/views/layouts/application.html.erb",
+		"/home/dialex/Documents/rails_projects/dcid/app/views/layouts/_footer.html.erb",
+		"/home/dialex/Documents/rails_projects/dcid/app/assets/stylesheets/custom.css.scss",
+		"/home/dialex/Documents/rails_projects/dcid/spec/requests/static_pages_spec.rb",
+		"/home/dialex/Documents/rails_projects/dcid/spec/support/utilities.rb",
+		"/home/dialex/Documents/rails_projects/dcid/app/views/static_pages/about.html.erb",
+		"/home/dialex/Documents/rails_projects/dcid/.gitignore",
+		"/home/dialex/Documents/rails_projects/dcid/app/helpers/application_helper.rb",
+		"/home/dialex/Documents/rails_projects/dcid/README.md",
+		"/home/dialex/Documents/rails_projects/dcid/config/application.rb",
+		"/home/dialex/Documents/rails_projects/dcid/app/assets/stylesheets/application.css",
+		"/home/dialex/Documents/rails_projects/dcid/spec/spec_helper.rb",
+		"/home/dialex/Documents/rails_projects/dcid/config/initializers/secret_token.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/layouts/_footer.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/layouts/_header.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/layouts/_shim.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/layouts/application.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/assets/stylesheets/custom.css.scss",
+		"/home/dialex/Documents/rails_projects/sample_app/config/application.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/Gemfile",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/static_pages/home.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/helpers/application_helper.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/spec/requests/static_pages_spec.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/.gitignore",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/static_pages/contact.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/controllers/static_pages_controller.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/config/routes.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/static_pages/about.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/app/views/static_pages/help.html.erb",
+		"/home/dialex/Documents/rails_projects/sample_app/config/database.yml",
+		"/home/dialex/Documents/rails_projects/sample_app/spec/spec_helper.rb",
+		"/home/dialex/Documents/rails_projects/sample_app/README.rdoc",
+		"/home/dialex/Documents/rails_projects/sample_app/README",
+		"/home/dialex/Documents/rails_projects/sample_app/READM",
+		"/home/dialex/Documents/rails_projects/sample_app/config/initializers/secret_token.rb",
+		"/home/dialex/Documents/rails_projects/demo_app/app/models/micropost.rb",
+		"/home/dialex/Documents/rails_projects/demo_app/app/models/user.rb",
+		"/home/dialex/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/dialex/Documents/rails_projects/demo_app/app/controllers/microposts_controller.rb",
+		"/home/dialex/Documents/rails_projects/demo_app/config/routes.rb",
+		"/home/dialex/Documents/rails_projects/demo_app/app/controllers/users_controller.rb",
+		"/home/dialex/Documents/rails_projects/demo_app/Gemfile",
+		"/home/dialex/Documents/rails_projects/first_app/Gemfile",
+		"/home/dialex/Documents/rails_projects/first_app/README.md",
+		"/home/dialex/Documents/rails_projects/first_app/.gitignore",
+		"/home/dialex/Documents/rails_projects/first_app/gemfile",
+		"/home/dialex/.gemrc",
+		"/home/dialex/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#999",
+			"<img src=\"img/logo-dcid-head.png\" width=\"25\" height=\"25\" alt=\"*\" />",
+			"span4",
+			"\n",
+			">\n",
+			"save"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$lightGray"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "TODO.md",
+					"settings":
+					{
+						"buffer_size": 227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spec/requests/user_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "spec/models/user_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1933,
+								1933
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								100
+							],
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"wrap_width": 100
+						},
+						"translation.x": 0.0,
+						"translation.y": 972.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								231
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"user",
+				"spec/models/user_spec.rb"
+			],
+			[
+				"migrate",
+				"db/migrate/20140208182124_create_users.rb"
+			],
+			[
+				"databa",
+				"config/database.yml"
+			],
+			[
+				"developmen",
+				"db/development.sqlite3"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"hoe",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"head",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"user_pa",
+				"spec/requests/user_pages_spec.rb"
+			],
+			[
+				"home",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"app",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"footer",
+				"app/views/layouts/_footer.html.erb"
+			],
+			[
+				"header",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"rsp",
+				"spec/requests/static_pages_spec.rb"
+			],
+			[
+				"cust",
+				"app/assets/stylesheets/custom.css.scss"
+			],
+			[
+				"ign",
+				".gitignore"
+			],
+			[
+				"helper",
+				"app/helpers/application_helper.rb"
+			],
+			[
+				"about",
+				"app/views/static_pages/about.html.erb"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"layouts",
+				"app/views/layouts/_header.html.erb"
+			],
+			[
+				"custo",
+				"app/assets/stylesheets/custom.css.scss"
+			],
+			[
+				"ignore",
+				".gitignore"
+			],
+			[
+				"todo",
+				"TODO.md"
+			],
+			[
+				"view",
+				"app/views/static_pages/home.html.erb"
+			],
+			[
+				"spec",
+				"spec/spec_helper.rb"
+			],
+			[
+				"static",
+				"spec/requests/static_pages_spec.rb"
+			],
+			[
+				"tests",
+				"app/controllers/static_pages_controller.rb"
+			],
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"secre",
+				"config/initializers/secret_token.rb"
+			],
+			[
+				"layo",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"data",
+				"config/database.yml"
+			],
+			[
+				".ig",
+				".gitignore"
+			],
+			[
+				"appli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"abo",
+				"app/views/static_pages/about.html.erb"
+			],
+			[
+				"hel",
+				"app/views/static_pages/help.html.erb"
+			],
+			[
+				"sta",
+				"spec/requests/static_pages_spec.rb"
+			],
+			[
+				"layou",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"help",
+				"app/views/static_pages/help.html.erb"
+			],
+			[
+				"stati",
+				"app/controllers/static_pages_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

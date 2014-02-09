@@ -1,7 +1,6 @@
 ## NOW!
 
 - Sample_app functionality: rspec tests
-- Data Model: create User
 - Data Model: create Proposal
 - User authentication
 
