@@ -4,7 +4,7 @@ describe User do
   subject { @user }
 
   before { @user = User.new(name: "Alice Wonderland", email: "alice@wonderland.com",
-                            citizen_number:"123123123") }  
+                            citizen_number:"100100100") }  
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
@@ -72,11 +72,27 @@ describe User do
     end
   end
 
-  describe "when email address is already taken" do
+  describe "when citizen number format is not valid" do
+    it "should not be valid" do
+      numbers = %w[03773392 1234 a1234567]
+      numbers.each do |valid_numbers|
+        @user.citizen_number = valid_numbers
+        expect(@user).not_to be_valid
+      end
+    end
+  end
+
+  describe "when citizen number is already taken" do
     before do
-      user_with_same_email = @user.dup
-      user_with_same_email.email = @user.email.upcase
-      user_with_same_email.save
+      user_copy = @user.dup
+      user_copy.save
+    end
+    it { should_not be_valid }
+  end
+
+   describe "when trying to create twice the same user" do
+    before do
+      user_copy = @user.dup
     end
     it { should_not be_valid }
   end
