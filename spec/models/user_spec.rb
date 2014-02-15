@@ -3,8 +3,8 @@ require 'spec_helper'
 describe User do
   subject { @user }
 
-  before { @user = User.new(name: "Alice Wonderland", email: "alice@wonderland.com",
-                            citizen_number:"100100100") }  
+  before { @user = User.new(name: "Alice Wonderland", email: "alice@wonderland.com", citizen_number:"100100100",
+                            password: "secret", password_confirmation: "secret") }
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
@@ -87,13 +87,6 @@ describe User do
     before do
       user_copy = @user.dup
       user_copy.save
-    end
-    it { should_not be_valid }
-  end
-
-   describe "when trying to create twice the same user" do
-    before do
-      user_copy = @user.dup
     end
     it { should_not be_valid }
   end
