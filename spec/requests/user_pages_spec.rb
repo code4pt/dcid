@@ -11,7 +11,7 @@ describe "User pages" do
 
   describe "signup" do
     before { visit signup_path }
-    let(:submit) { "Criar o meu perfil" }
+    let(:submit) { "Criar perfil" }
 
     describe "with invalid information" do
       it "should not create a user" do
