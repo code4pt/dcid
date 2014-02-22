@@ -5,6 +5,7 @@
 <br>
 
 <%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages' %>
 
   <%= f.label :name, "Nome" %>
   <%= f.text_field :name, placeholder: "Primeiro e último nome" %>
