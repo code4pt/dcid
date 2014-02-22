@@ -1,4 +1,28 @@
 <% provide(:title, 'Participar') %>
 
 <h1>Participe</h1>
-<p>Para poder participar precisa criar a sua conta.</p>
+<p>Antes de poder participar precisa criar o seu perfil:</p>
+<br>
+
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :name, "Nome" %>
+  <%= f.text_field :name, placeholder: "Primeiro e último nome" %>
+
+  <%= f.label :email, "Email" %>
+  <%= f.text_field :email %>
+
+  <%= f.label :citizen_number, "Número do BI/CC *" %>
+  <%= f.text_field :citizen_number %>
+
+  <%= f.label :password, "Palavra-chave" %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation, "Escreva novamente a sua palavra-chave" %>
+  <%= f.password_field :password_confirmation, placeholder: "Só para confirmar" %>
+
+  <br>
+  <%= f.submit "Criar o meu perfil", class: "btn btn-primary" %>
+<% end %>
+
+<small class="muted">*Nota: O número de Bilhete de Identidade (BI) ou Cartão de Cidadão (CC) garante que cada cidadão vota uma vez. Não podemos usar o email porque o mesmo cidadão podia criar dois perfis com dois emails diferentes e votar a dobrar - o que seria injusto.</small>

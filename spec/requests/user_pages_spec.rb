@@ -21,11 +21,11 @@ describe "User pages" do
 
     describe "with valid information" do
       before do
-        fill_in "Name",           with: "Alice Wonderland"
-        fill_in "Email",          with: "alice@wonderland.com"
-        fill_in "Citizen Number", with: "100100100"
-        fill_in "Password",       with: "secret"
-        fill_in "Confirmation",   with: "secret"
+        fill_in "Nome",                                   with: "Alice Wonderland"
+        fill_in "Email",                                  with: "alice@wonderland.com"
+        fill_in "Número do BI/CC *",                      with: "100100100"
+        fill_in "Palavra-chave",                          with: "secret"
+        fill_in "Escreva novamente a sua palavra-chave",  with: "secret"
       end
 
       it "should create a user" do
