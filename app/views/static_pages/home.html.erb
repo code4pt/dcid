@@ -1,13 +1,33 @@
 <% provide(:title, '') %>
 
 <div class="row">
-  <br/><br/>
-  <div class="col-md-12 text-center">
-    <h1><%= link_to image_tag("logo-dcid.png", alt: "DCID logo", width: "350"), '#' %></h1>
-    <br/>
-    <h1><strong>PROPÕE</strong></h1>
-    <h1><strong>DISCUTE</strong></h1>
-    <h1><a href="#"><button class="btn btn-success btn-lg">DCID</button></a></h1>
+  <div class="span12 text-center">
+    <h1><%= link_to image_tag("logo-dcid.png", alt: "DCID logo", width: "350"), signup_path %></h1>
   </div>
-  <br/><br/>
 </div>
+
+<br>
+
+<div class="row">
+  <div class="span4 text-center">
+    <h2><strong>Propor</strong></h2>
+    <p class="">Faça a sua voz ser ouvida</p>
+  </div>
+  <div class="span4 text-center">
+    <h2><strong>Debater</strong></h2>
+    <p class="">Melhore a sua proposta</p>
+  </div>
+  <div class="span4 text-center">
+    <h2><strong>Decidir</strong></h2>
+    <p class="">Junte apoiantes e faça acontecer</p>
+  </div>
+</div>
+
+<br><br>
+
+<div class="row">
+  <div class="span12 text-center">
+    <a href="/signup"><button class="btn btn-success btn-large">Participe!</button></a>
+  </div>
+</div>
+
