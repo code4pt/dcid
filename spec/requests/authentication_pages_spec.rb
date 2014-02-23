@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Authentication," do
+  
   subject { page }
 
 
@@ -44,5 +45,5 @@ describe "Authentication," do
 
   describe "signout," do
   end
-  
+
 end
