@@ -40,6 +40,11 @@ describe "Authentication," do
       it { should have_link('Perfil',     href: user_path(user)) }
       it { should have_link('Sair',    href: signout_path) }
       it { should_not have_link('Entrar', href: signin_path) }
+
+      describe "followed by signout" do
+        before { click_link "Sair" }
+        it { should have_link('Entrar') }
+      end
     end
   end
 
