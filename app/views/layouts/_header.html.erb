@@ -8,17 +8,17 @@
             <li><%= link_to "Propostas", '#' %></li>
             <li><%= link_to "Cidadãos",  '#' %></li>
             <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.first_name %> <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw"></i> <%= current_user.first_name %> <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Perfil",     current_user %></li>
+                <li><%= link_to "Perfil",  current_user %></li>
                 <li><%= link_to "Definições", '#' %></li>
                 <li class="divider"></li>
-                <li><%= link_to "Sair", signout_path, method: "delete" %></li>
+                <li><%= link_to '<i class="fa fa-sign-out"></i> Sair'.html_safe, signout_path, method: "delete" %></li>
               </ul>
             </li>
           <% else %>
             <li><%= link_to "Como funciona?", '#' %></li>
-            <li><%= link_to "Entrar",         signin_path %></li>
+            <li><%= link_to '<i class="fa fa-sign-in fa-fw"></i> Entrar'.html_safe, signin_path %></li>
           <% end %>
         </ul>
       </nav>
