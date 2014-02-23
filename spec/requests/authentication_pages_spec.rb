@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe "Authentication," do
-
   subject { page }
+
 
   describe "signin page" do
     before { visit signin_path }
@@ -10,6 +10,7 @@ describe "Authentication," do
     it { should have_content('Entrar') }
     it { should have_title('Entrar') }
   end
+
 
   describe "signin," do
     before { visit signin_path }
@@ -40,4 +41,8 @@ describe "Authentication," do
       it { should_not have_link('Entrar', href: signin_path) }
     end
   end
+
+  describe "signout," do
+  end
+  
 end
