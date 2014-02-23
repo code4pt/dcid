@@ -15,6 +15,19 @@ class User < ActiveRecord::Base
   before_create :create_remember_token  
 
 
+  def first_name
+    self.name.split(' ').first
+  end
+
+  def last_name
+    self.name.split(' ').last
+  end
+
+  def short_name
+    first_name + last_name
+  end
+
+
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
@@ -22,6 +35,8 @@ class User < ActiveRecord::Base
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
+
+  
 
 
   private
