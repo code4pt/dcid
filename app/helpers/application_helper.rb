@@ -12,7 +12,7 @@ module ApplicationHelper
 
   # Returns the current version of DCID
   def app_version()
-    "0.0.1"
+    "0.0.2"
   end
 
 end

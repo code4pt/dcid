@@ -3,10 +3,11 @@
 
 *propose . discuss . decide*
 
-[View demo](http://lit-mesa-5562.herokuapp.com/)
+[View demo](https://lit-mesa-5562.herokuapp.com/)
 
 ## Release notes
 
-### 0.0.1
+### 0.0.2
 
-- Data model
+- Authentication: sign up, in and out
+- Data model: User

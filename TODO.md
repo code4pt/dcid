@@ -3,10 +3,9 @@
 - User authentication: public profile
 - User authentication: edit profile
 - Data Model: create Proposal
-- Sample_app functionality: rspec tests
 - Use bootstrap 3 (make it responsive)
-
-~~User authentication: sign in/sign out~~
+- Use Font-Awesome icons
+- Sample_app functionality: rspec tests
 
 
 ## Backlog
