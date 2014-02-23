@@ -1,19 +1,24 @@
 <% provide(:title, "Sign in") %>
-<h1>Entrar</h1>
 
 <div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
+  <div class="span12">
+    <h1>Entrar</h1>
 
-      <%= f.label :email, "Email" %>
-      <%= f.text_field :email %>
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :password, "Palavra-chave" %>
-      <%= f.password_field :password %>
+          <%= f.label :email, "Email" %>
+          <%= f.text_field :email %>
 
-      <%= f.submit "Entrar", class: "btn btn-success" %>
-    <% end %>
+          <%= f.label :password, "Palavra-chave" %>
+          <%= f.password_field :password %>
 
-    <small>Não tem um perfil? <%= link_to "Crie-o aqui!", signup_path %></small>
+          <%= f.submit "Entrar", class: "btn btn-success" %>
+        <% end %>
+        <small>Não tem um perfil? <%= link_to "Crie-o aqui!", signup_path %></small>
+      </div>
+    </div>
+    
   </div>
 </div>

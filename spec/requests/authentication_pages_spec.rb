@@ -19,6 +19,11 @@ describe "Authentication," do
 
       it { should have_title('Entrar') }
       it { should have_selector('div.alert.alert-error') }
+
+      describe "after visiting another page" do
+        before { click_link "DCID" }
+        it { should_not have_selector('div.alert.alert-error') }
+      end
     end
 
     describe "with valid information" do
@@ -26,7 +31,7 @@ describe "Authentication," do
       before do
         fill_in "Email",         with: user.email.upcase
         fill_in "Palavra-chave", with: user.password
-        click_button "Sign in"
+        click_button "Entrar"
       end
 
       it { should have_title(user.name) }
