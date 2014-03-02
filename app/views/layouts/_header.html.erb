@@ -5,13 +5,13 @@
       <nav>
         <ul class="nav pull-right">
           <% if signed_in? %>
-            <li><%= link_to "Propostas", '#' %></li>
-            <li><%= link_to "Cidadãos",  '#' %></li>
+            <li><%= link_to '<i class="fa fa-comment"></i> Propostas'.html_safe, '#' %></li>
+            <li><%= link_to '<i class="fa fa-group"></i> Cidadãos'.html_safe, '#' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw"></i> <%= current_user.first_name %> <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Perfil",  current_user %></li>
-                <li><%= link_to "Definições", edit_user_path(current_user) %></li>
+                <li><%= link_to '<i class="fa fa-cog"></i> Definições'.html_safe, edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li><%= link_to '<i class="fa fa-sign-out"></i> Sair'.html_safe, signout_path, method: "delete" %></li>
               </ul>
