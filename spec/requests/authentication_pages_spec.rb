@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "Authentication," do
-  
+
   subject { page }
 
 
@@ -38,7 +38,8 @@ describe "Authentication," do
 
       it { should have_title(user.name) }
       it { should have_link('Perfil',     href: user_path(user)) }
-      it { should have_link('Sair',    href: signout_path) }
+      it { should have_link('Definições', href: edit_user_path(user)) }
+      it { should have_link('Sair',       href: signout_path) }
       it { should_not have_link('Entrar', href: signin_path) }
 
       describe "followed by signout" do
