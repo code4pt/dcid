@@ -1,8 +1,8 @@
-<% provide(:title, "Editar perfil") %>
+<% provide(:title, "Editar definições") %>
 
 <div class="row">
   <div class="span12">
-    <h1>Edite o seu perfil</h1>
+    <h1>Edite as suas definições</h1>
 
     <div class="row">
       <div class="span6 offset3">
@@ -21,14 +21,17 @@
           <%= f.label :password_confirmation, "Repita a nova palavra-chave" %>
           <%= f.password_field :password_confirmation, placeholder: "Só para confirmar" %>
 
-          <%= f.label "Imagem" %>
+          <h3>Privacidade</h3>
+          <%= f.label "Nome público" %>
+          ON/OFF
+
+          <%= f.label "Imagem pública" %>
           <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
           <br><br>
 
-          <%= f.submit "Guardar alterações", class: "btn" %>
+          <%= f.submit "Guardar alterações", class: "btn btn-success" %>
+          <%= link_to '<button class="btn">Cancelar</button>'.html_safe, current_user %>
         <% end %>
-
-
       </div>
     </div>
 
