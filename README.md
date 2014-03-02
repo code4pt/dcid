@@ -3,7 +3,7 @@
 
 *propose . discuss . decide*
 
-[View demo](https://lit-mesa-5562.herokuapp.com/)
+[View demo](https://salty-sea-1091.herokuapp.com/)
 
 ## Release notes
 
