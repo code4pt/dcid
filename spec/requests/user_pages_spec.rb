@@ -57,8 +57,8 @@ describe "User pages" do
     before { visit edit_user_path(user) }
 
     describe "page" do
-      it { should have_content("Edite o seu perfil") }
-      it { should have_title("Editar perfil") }
+      it { should have_content("Edite as suas definições") }
+      it { should have_title("Editar definições") }
       it { should have_link('alterar', href: 'http://gravatar.com/emails') }
     end
 

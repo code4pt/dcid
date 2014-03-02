@@ -30,11 +30,7 @@ describe "Authentication," do
 
     describe "with valid information" do
       let(:user) { FactoryGirl.create(:user) }
-      before do
-        fill_in "Email",         with: user.email.upcase
-        fill_in "Palavra-chave", with: user.password
-        click_button "Entrar"
-      end
+      before { sign_in user }
 
       it { should have_title(user.name) }
       it { should have_link('Perfil',     href: user_path(user)) }
