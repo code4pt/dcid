@@ -48,24 +48,45 @@ describe "User pages" do
     let(:user) { FactoryGirl.create(:user) }
     before { visit user_path(user) }
 
-    it { should have_content(user.name) }
     it { should have_title(user.name) }
+    it { should have_content(user.name) }
   end
 
   describe "profile edit," do
     let(:user) { FactoryGirl.create(:user) }
-    before { visit edit_user_path(user) }
+    before do
+      sign_in user
+      visit edit_user_path(user)
+    end
 
     describe "page" do
-      it { should have_content("Edite as suas definições") }
       it { should have_title("Editar definições") }
+      it { should have_content("Edite as suas definições") }
       it { should have_link('alterar', href: 'http://gravatar.com/emails') }
+    end
+
+    describe "with valid information" do
+      let(:new_name)  { "New Name" }
+      let(:new_email) { "new@example.com" }
+      before do
+        fill_in "Nome",                   with: new_name
+        fill_in "Email",                  with: new_email
+        fill_in "Palavra-chave",          with: user.password
+        fill_in "Repita a palavra-chave", with: user.password
+        click_button "Guardar alterações"
+      end
+
+      it { should have_title(new_name) }
+      it { should have_selector('div.alert.alert-success') }
+      it { should have_link('Sair', href: signout_path) }
+      specify { expect(user.reload.name).to  eq new_name }
+      specify { expect(user.reload.email).to eq new_email }
     end
 
     describe "with invalid information" do
       before { click_button "Guardar alterações" }
 
-      it { should have_content('error') }
+      it { should have_selector('div.alert.alert-error') }
     end
   end
 
