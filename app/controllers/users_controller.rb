@@ -18,11 +18,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Definições alteradas"
       redirect_to @user
@@ -44,7 +42,10 @@ class UsersController < ApplicationController
     # Before filters
 
     def signed_in_user
-      redirect_to signin_url, notice: "Não fique de fora." unless signed_in?
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Não fique de fora"
+      end
     end
 
     def correct_user

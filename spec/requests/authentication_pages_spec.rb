@@ -65,6 +65,22 @@ describe "Authentication," do
           specify { expect(response).to redirect_to(signin_path) }
         end
       end
+
+      describe "when attempting to visit a protected page" do
+        before do
+          visit edit_user_path(user)
+          fill_in "Email",         with: user.email
+          fill_in "Palavra-chave", with: user.password
+          click_button "Entrar"
+        end
+
+        describe "after signing in" do
+
+          it "should render the desired protected page" do
+            expect(page).to have_title('Editar definições')
+          end
+        end
+      end
     end
 
     describe "as wrong user" do
