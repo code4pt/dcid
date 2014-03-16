@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in @user
-      flash[:success] = "A partir de agora, é você que dcid."
+      flash[:success] = "A partir de agora, é você que dcid"
       redirect_to @user  #user's show page
     else
       render 'new'
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
   private
