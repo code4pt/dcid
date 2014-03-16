@@ -126,6 +126,20 @@ input {
   @extend .error;
 }
 
+/* === Users' index === */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    &:last-child {
+      //specifics of last
+    }
+  }
+}
+
 
 /* ============
  *  Typography 

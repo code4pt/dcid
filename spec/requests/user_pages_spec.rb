@@ -90,4 +90,22 @@ describe "User pages" do
     end
   end
 
+  describe "index," do
+    before do
+      sign_in FactoryGirl.create(:user)
+      FactoryGirl.create(:user, name: "Alice Wonderland", email: "alice@wonderland.com")
+      FactoryGirl.create(:user, name: "Bob Builder", email: "bob@builder.com")
+      visit users_path
+    end
+
+    it { should have_title('Todos os cidadãos') }
+    it { should have_content('Todos os cidadãos') }
+
+    it "should list each user" do
+      User.all.each do |user|
+        expect(page).to have_selector('li', text: user.name)
+      end
+    end
+  end
+
 end
