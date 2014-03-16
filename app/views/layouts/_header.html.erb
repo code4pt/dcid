@@ -3,7 +3,7 @@
     <div class="container">
       <%= link_to "DCID", root_path, id: "logo" %>
       <nav>
-        <ul class="nav pull-right">          
+        <ul class="nav pull-right">
           <% if signed_in? %>
             <li><%= link_to "Propostas", '#' %></li>
             <li><%= link_to "Cidadãos",  '#' %></li>
@@ -17,7 +17,7 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Como funciona?", '#' %></li>
+            <li><%= link_to "Como funciona?", how_path %></li>
             <li><%= link_to '<i class="fa fa-sign-in fa-fw"></i> Entrar'.html_safe, signin_path %></li>
           <% end %>
         </ul>
