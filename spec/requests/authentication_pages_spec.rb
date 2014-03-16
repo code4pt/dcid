@@ -105,6 +105,19 @@ describe "Authentication," do
         #specify { expect(response).to redirect_to(root_url) } #FIXME redirect to user_url (public profile)
       end
     end
-  end
 
+    describe "as non-admin user" do
+      let(:user) { FactoryGirl.create(:user) }
+      let(:non_admin) { FactoryGirl.create(:user) }
+
+      before { sign_in non_admin, no_capybara: true }
+
+      #TODO FIXME
+      #describe "submitting a DELETE request to the Users#destroy action" do
+      #  before { delete user_path(user) }
+      #  specify { expect(response).to redirect_to(root_url) }
+      #end
+    end
+
+  end
 end
