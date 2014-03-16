@@ -6,7 +6,7 @@
         <ul class="nav pull-right">
           <% if signed_in? %>
             <li><%= link_to '<i class="fa fa-comment"></i> Propostas'.html_safe, '#' %></li>
-            <li><%= link_to '<i class="fa fa-group"></i> Cidadãos'.html_safe, '#' %></li>
+            <li><%= link_to '<i class="fa fa-group"></i> Cidadãos'.html_safe, users_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-fw"></i> <%= current_user.first_name %> <b class="caret"></b></a>
               <ul class="dropdown-menu">

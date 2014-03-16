@@ -93,12 +93,12 @@ describe "User pages" do
   describe "index," do
     before do
       sign_in FactoryGirl.create(:user)
-      FactoryGirl.create(:user, name: "Alice Wonderland", email: "alice@wonderland.com")
-      FactoryGirl.create(:user, name: "Bob Builder", email: "bob@builder.com")
+      FactoryGirl.create(:user, name: "Calvin Hobbes", email: "calvin@hobbes.com", citizen_number: "12662280")
+      FactoryGirl.create(:user, name: "Dave the Barbarian", email: "dave@barbarian.com", citizen_number: "12662281")
       visit users_path
     end
 
-    it { should have_title('Todos os cidadãos') }
+    it { should have_title('Cidadãos') }
     it { should have_content('Todos os cidadãos') }
 
     it "should list each user" do
