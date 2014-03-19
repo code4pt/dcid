@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap-responsive.css
  *= require font-awesome
  */
