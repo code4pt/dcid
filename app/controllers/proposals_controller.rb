@@ -12,9 +12,9 @@ class ProposalsController < ApplicationController
     @proposal = current_user.proposals.build(proposal_params)
     if @proposal.save
       flash[:success] = "Proposta submetida."
-      redirect_to root_url
+      redirect_to @proposal
     else
-      render 'static_pages/home'
+      render 'new'
     end
   end
 
@@ -28,7 +28,7 @@ class ProposalsController < ApplicationController
   private
 
     def proposal_params
-      params.require(:proposal).permit(:content)
+      params.require(:proposal).permit(:title, :problem, :solution)
     end
 end
 
