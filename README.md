@@ -7,6 +7,10 @@
 
 ## Release notes
 
+### 0.0.4
+
+-
+
 ### 0.0.3
 
 - Static pages: how it works
