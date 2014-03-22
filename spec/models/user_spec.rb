@@ -153,7 +153,30 @@ describe "User" do
       before { @user.save }
       its(:remember_token) { should_not be_blank }  # it { expect(@user.remember_token).not_to be_blank }
     end
+  end
 
+  describe "proposal associations," do
+
+    before { @user.save }
+    let!(:older_proposal) do
+      FactoryGirl.create(:proposal, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_proposal) do
+      FactoryGirl.create(:proposal, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right proposals in the right order" do
+      expect(@user.proposals.to_a).to eq [newer_proposal, older_proposal]
+    end
+
+    it "should destroy associated proposals" do
+      proposals = @user.proposals.to_a
+      @user.destroy
+      expect(proposals).not_to be_empty
+      proposals.each do |proposal|
+        expect(Proposal.where(id: proposal.id)).to be_empty
+      end
+    end
   end
 
 end

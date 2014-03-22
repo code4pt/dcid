@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   has_secure_password
-  has_many :proposals
+  has_many :proposals, dependent: :destroy
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_CITIZEN_NUMBER_REGEX = /[1-9]\d{7,}/  #TODO what is the portuguese regex for BI/CC number?
@@ -34,8 +34,6 @@ class User < ActiveRecord::Base
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
   end
-
-
 
 
   private
