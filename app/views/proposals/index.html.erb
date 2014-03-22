@@ -1,0 +1,15 @@
+<% provide(:title, 'Propostas') %>
+
+<div class="row">
+  <div class="span12">
+
+    <h1>Todas as propostas</h1>
+
+    <ul>
+      <%= render @proposals %>
+    </ul>
+
+    <%= will_paginate %>
+
+  </div>
+</div>
