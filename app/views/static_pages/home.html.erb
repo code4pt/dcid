@@ -3,12 +3,26 @@
 <% if signed_in? %>
 
 
-  <div class="row">
-    <div class="span12">
-      <h3>Propostas<h3>
-      <%=  %>
-    </div>
+<div class="row">
+  <div class="span12 text-center">
+    <h1><%= link_to image_tag("logo-dcid.png", alt: "DCID logo", width: "350"), signup_path %></h1>
   </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="span4 offset2 text-center">
+    <i class="fa fa-bullhorn fa-4x"></i>
+    <br><br>
+    <%= link_to '<button class="btn btn-success btn-large"><b>Propor</b></button>'.html_safe, 'proposals/new' %>
+  </div>
+  <div class="span4 text-center">
+    <i class="fa fa-thumbs-o-up fa-4x"></i>
+    <br><br>
+    <%= link_to '<button class="btn btn-success btn-large"><b>Decidir</b></button>'.html_safe, proposals_path %>
+  </div>
+</div>
 
 
 <% else %>
@@ -25,7 +39,7 @@
 <div class="row">
   <div class="span4 text-center">
     <i class="fa fa-bullhorn fa-4x"></i>
-    <h2><strong>Propor</strong></h2>
+    <h2><strong>Propor</strong></h2><
     <p class="">Faça a sua voz ser ouvida</p>
   </div>
   <div class="span4 text-center">
@@ -47,3 +61,6 @@
     <%= link_to '<button class="btn btn-success btn-large">Participe!</button>'.html_safe, signup_path %>
   </div>
 </div>
+
+
+<% end %>
