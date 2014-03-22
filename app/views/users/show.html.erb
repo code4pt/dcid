@@ -7,9 +7,8 @@
 
     <% if @user.proposals.any? %>
       <h3 align="">Propostas (<%= @user.proposals.count %>)</h3>
-      <ol class="proposals">
-        <%= render @proposals %>
-      </ol>
+      <br>
+      <%= render @proposals %>
       <%= will_paginate @proposals %>
     <% end %>
 

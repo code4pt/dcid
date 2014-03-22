@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     def signed_in_user
       unless signed_in?
         store_location
-        redirect_to signin_url, notice: "Não fique de fora."
+        redirect_to signin_url, notice: "Não fique à porta."
       end
     end
 

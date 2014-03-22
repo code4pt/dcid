@@ -9,4 +9,19 @@ class Proposal < ActiveRecord::Base
 
   default_scope -> { order('created_at DESC') }
 
+
+
+  def score
+    self.upvotes - self.downvotes
+  end
+
+  def summary(maxChars)
+    summary = self.solution
+    if summary.length < maxChars then
+      return summary
+    else
+      indexOfLastCompleteWord = summary.rindex(" ", maxChars-3)   # provides space for the "..." (3 chars)
+      return summary[0, indexOfLastCompleteWord] + "..."
+    end
+  end
 end
