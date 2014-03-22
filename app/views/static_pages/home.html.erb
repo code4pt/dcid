@@ -1,5 +1,19 @@
 <% provide(:title, '') %>
 
+<% if signed_in? %>
+
+
+  <div class="row">
+    <div class="span12">
+      <h3>Propostas<h3>
+      <%=  %>
+    </div>
+  </div>
+
+
+<% else %>
+
+
 <div class="row">
   <div class="span12 text-center">
     <h1><%= link_to image_tag("logo-dcid.png", alt: "DCID logo", width: "350"), signup_path %></h1>
@@ -33,4 +47,3 @@
     <%= link_to '<button class="btn btn-success btn-large">Participe!</button>'.html_safe, signup_path %>
   </div>
 </div>
-
