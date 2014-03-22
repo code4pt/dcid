@@ -20,4 +20,34 @@ describe "Proposal" do
     it { should_not be_valid }
   end
 
+  describe "with blank title" do
+    before { @proposal.title = " " }
+    it { should_not be_valid }
+  end
+
+  describe "with blank problem" do
+    before { @proposal.problem = " " }
+    it { should_not be_valid }
+  end
+
+  describe "with blank solution" do
+    before { @proposal.solution = " " }
+    it { should_not be_valid }
+  end
+
+  describe "with title that is too long" do
+    before { @proposal.title = "a" * 81 }
+    it { should_not be_valid }
+  end
+
+  describe "with problem that is too long" do
+    before { @proposal.problem = "a" * 401 }
+    it { should_not be_valid }
+  end
+
+  describe "with solution that is too long" do
+    before { @proposal.solution = "a" * 701 }
+    it { should_not be_valid }
+  end
+
 end
