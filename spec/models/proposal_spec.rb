@@ -36,7 +36,7 @@ describe "Proposal" do
   end
 
   describe "with title that is too long" do
-    before { @proposal.title = "a" * 81 }
+    before { @proposal.title = "a" * 61 }
     it { should_not be_valid }
   end
 

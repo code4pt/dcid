@@ -10,7 +10,7 @@
           <%= render 'error_messages' %>
 
           <%= f.label :title, "Título" %>
-          <%= f.text_field :title, maxlength: 80, placeholder: "Uma frase a que seja possível responder 'Sim' ou 'Não'" %>
+          <%= f.text_field :title, maxlength: 60, placeholder: "Uma frase a que seja possível responder 'Sim' ou 'Não'" %>
 
           <%= f.label :problem, "Problema" %>
           <%= f.text_area :problem, rows: 5, maxlength: 400, placeholder: "(max. 400 caract.)"  %>
