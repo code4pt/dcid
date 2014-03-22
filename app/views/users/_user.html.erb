@@ -1,7 +1,7 @@
 <li>
-  <%= gravatar_for user, size: 30 %>
+  <%= gravatar_for user, size: 32 %>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to 'Apagar', user, method: :delete, data: { confirm: "De certeza?" } %>
+  &nbsp;<%= link_to '<button class="btn">Apagar</button>'.html_safe, user, method: :delete, data: { confirm: "De certeza?" } %>
   <% end %>
 </li>
