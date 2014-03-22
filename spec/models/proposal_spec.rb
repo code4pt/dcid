@@ -4,7 +4,7 @@ describe "Proposal" do
 
   subject { @proposal }
   let(:user) { FactoryGirl.create(:user) }
-  before { @proposal = user.proposals.build(title: "Lorem ipsum") }
+  before { @proposal = user.proposals.build(title: "A title", problem: "A problem", solution: "A solution") }
 
   it { should respond_to(:title) }
   it { should respond_to(:problem) }

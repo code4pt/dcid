@@ -5,7 +5,13 @@
 
     <h1><%= gravatar_for @user %> <%= @user.name %></h1>
 
-    <p><strong>Name:</strong> <%= @user.name %></p>
+    <% if @user.proposals.any? %>
+      <h3 align="">Propostas (<%= @user.proposals.count %>)</h3>
+      <ol class="proposals">
+        <%= render @proposals %>
+      </ol>
+      <%= will_paginate @proposals %>
+    <% end %>
 
   </div>
 </div>

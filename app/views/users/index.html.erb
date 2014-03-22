@@ -6,9 +6,7 @@
     <h1>Todos os cidadãos</h1>
 
     <ul class="users">
-      <% @users.each do |user| %>
-        <%= render user %>
-      <% end %>
+      <%= render @users%>
     </ul>
 
     <%= will_paginate %>

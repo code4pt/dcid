@@ -46,10 +46,19 @@ describe "User pages" do
 
   describe "profile page," do
     let(:user) { FactoryGirl.create(:user) }
+    let!(:m1) { FactoryGirl.create(:proposal, user: user, title: "Foo", problem: "This is a problem.", solution: "This is a soluion.") }
+    let!(:m2) { FactoryGirl.create(:proposal, user: user, title: "Bar", problem: "This is a problem.", solution: "This is a soluion.") }
+
     before { visit user_path(user) }
 
-    it { should have_title(user.name) }
     it { should have_content(user.name) }
+    it { should have_title(user.name) }
+
+    describe "proposals" do
+      it { should have_content(m1.title) }
+      it { should have_content(m2.title) }
+      it { should have_content(user.proposals.count) }
+    end
   end
 
   describe "profile edit," do
