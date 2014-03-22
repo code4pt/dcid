@@ -1,6 +1,7 @@
 Dcid::Application.routes.draw do
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions,  only: [:new, :create, :destroy]
+  resources :proposals, only: [:create, :destroy]
 
   root 'static_pages#home'
 

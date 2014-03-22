@@ -46,8 +46,10 @@ describe "Authentication," do
     end
   end
 
+
   describe "signout," do
   end
+
 
   describe "authorization," do
 
@@ -81,10 +83,21 @@ describe "Authentication," do
         end
 
         describe "after signing in" do
-
           it "should render the desired protected page" do
             expect(page).to have_title('Editar definições')
           end
+        end
+      end
+
+      describe "in the Proposals controller" do
+        describe "submitting to the create action" do
+          before { post proposals_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete proposal_path(FactoryGirl.create(:proposal)) }
+          specify { expect(response).to redirect_to(signin_path) }
         end
       end
     end
