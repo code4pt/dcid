@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
 
-  #attr_accessor :name, :email, :citizen_number, :password, :password_confirmation
-  
   has_secure_password
+  has_many :proposals
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_CITIZEN_NUMBER_REGEX = /[1-9]\d{7,}/  #TODO what is the portuguese regex for BI/CC number?
@@ -12,7 +11,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
 
   before_save { self.email = email.downcase }
-  before_create :create_remember_token  
+  before_create :create_remember_token
 
 
   def first_name
@@ -36,7 +35,7 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
-  
+
 
 
   private
