@@ -9,7 +9,10 @@ class Proposal < ActiveRecord::Base
 
   default_scope -> { order('created_at DESC') }
 
-
+  before_save {
+    self.upvotes = 0
+    self.downvotes = 0
+  }
 
   def score
     self.upvotes - self.downvotes
