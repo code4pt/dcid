@@ -13,8 +13,7 @@
         <br> <!-- for low resolutions, separates the previous text from voting buttons bellow -->
       </div>
       <div class="span3 text-center">
-        <p><a class="btn btn-success" title="I agree with this proposal." href="#"><b><i class="fa fa-thumbs-up"></i>&nbsp;<%= @proposal.upvotes %></b></a>&nbsp;
-           <a class="btn btn-danger" title="I disagree with this proposal." href="#"><b><i class="fa fa-thumbs-down"></i>&nbsp;<%= @proposal.downvotes %></b></a></p>
+        <p><%= render 'shared/vote_buttons', :proposal => @proposal %></p>
         <p><%= link_to @proposal.user.short_name, @proposal.user %> em <%= @proposal.created_at.to_time.strftime('%e/%m/%Y') %></p>
       </div>
     </div>
