@@ -5,7 +5,7 @@
 
 <div class="row">
   <div class="span12 text-center">
-    <h1><%= link_to image_tag("logo-dcid.png", alt: "DCID logo", width: "350"), signup_path %></h1>
+    <h1><%= image_tag("logo-dcid.png", alt: "DCID logo", width: "350") %></h1>
   </div>
 </div>
 
@@ -17,6 +17,7 @@
     <br><br>
     <%= link_to '<button class="btn btn-success btn-large"><b>Propor</b></button>'.html_safe, 'proposals/new' %>
   </div>
+  <br class="visible-phone"><!-- separates divs -->
   <div class="span4 text-center">
     <i class="fa fa-thumbs-o-up fa-4x"></i>
     <br><br>

@@ -10,7 +10,7 @@
         <br>
         <h3>Solução</h3>
         <p><%= @proposal.solution %></p>
-        <br> <!-- for low resolutions, separates the previous text from voting buttons bellow -->
+        <br class="visible-phone"> <!-- separates text -->
       </div>
       <div class="span3 text-center">
         <p><%= render 'shared/vote_buttons', :proposal => @proposal %></p>
