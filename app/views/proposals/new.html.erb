@@ -1,0 +1,28 @@
+<% provide(:title, 'Submeter proposta') %>
+
+<div class="row">
+  <div class="span12">
+    <h1>A sua proposta</h1>
+
+    <div class="row">
+      <div class="span8 offset2">
+        <%= form_for(@proposal) do |f| %>
+          <%= render 'error_messages' %>
+
+          <%= f.label :title, "Título" %>
+          <%= f.text_field :title, placeholder: "Uma frase a que seja possível responder 'Sim' ou 'Não'" %>
+
+          <%= f.label :problem, "Problema" %>
+          <%= f.text_area :problem, rows: 5, placeholder: "(max. 400 caract.)"  %>
+
+          <div id="solution_field"></div>
+          <%= f.label :solution, "Solução" %>
+          <%= f.text_area :solution, rows: 8, maxlength: 700, placeholder: "(max. 700 caract.)" %>
+
+          <br>
+          <%= f.submit "Submeter", class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
