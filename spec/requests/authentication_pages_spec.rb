@@ -32,7 +32,6 @@ describe "Authentication," do
       let(:user) { FactoryGirl.create(:user) }
       before { sign_in user }
 
-      it { should have_title(user.name) }
       it { should have_link('Cidadãos',   href: users_path) }
       it { should have_link('Perfil',     href: user_path(user)) }
       it { should have_link('Definições', href: edit_user_path(user)) }
