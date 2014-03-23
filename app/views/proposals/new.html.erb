@@ -7,7 +7,7 @@
     <div class="row">
       <div class="span8 offset2">
         <%= form_for(@proposal) do |f| %>
-          <%= render 'error_messages' %>
+          <%= render 'shared/error_messages', object: f.object %>
 
           <%= f.label :title, "Título" %>
           <%= f.text_field :title, maxlength: 60, placeholder: "Uma frase a que seja possível responder 'Sim' ou 'Não'" %>
