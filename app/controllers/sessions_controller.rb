@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or user
     else
-      flash.now[:error] = 'Combinação email/palavra-chave errada'
+      flash.now[:error] = 'Combinação email/palavra-chave errada.'
       render 'new'
     end
   end
