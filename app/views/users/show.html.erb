@@ -6,7 +6,7 @@
     <h1><%= gravatar_for @user %> <%= @user.name %></h1>
 
     <% if @user.proposals.any? %>
-      <h3>Propostas (<%= @user.proposals.count %>)</h3>
+      <h3>As minhas propostas (<%= @user.proposals.count %>)</h3>
       <br>
       <%= render @proposals %>
       <%= will_paginate @proposals %>
