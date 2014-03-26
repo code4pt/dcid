@@ -1,5 +1,6 @@
 class ProposalsController < ApplicationController
   before_action :signed_in_user, only: [:new, :create, :index, :destroy]
+  before_action :correct_user,   only: :destroy
 
   def index
     @proposals = Proposal.paginate(page: params[:page])
@@ -24,6 +25,9 @@ class ProposalsController < ApplicationController
   end
 
   def destroy
+    @proposal.destroy
+    flash[:success] = "Proposta apagada."
+    redirect_to user_path(current_user)
   end
 
 
@@ -31,6 +35,11 @@ class ProposalsController < ApplicationController
 
     def proposal_params
       params.require(:proposal).permit(:title, :problem, :solution)
+    end
+
+    def correct_user
+      @proposal = current_user.proposals.find_by(id: params[:id])
+      redirect_to root_url if @proposal.nil?
     end
 end
 
