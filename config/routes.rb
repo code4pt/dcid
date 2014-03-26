@@ -8,6 +8,7 @@ Dcid::Application.routes.draw do
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/how',     to: 'static_pages#how',     via: 'get'
+  match '/terms',   to: 'static_pages#terms',   via: 'get'
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
