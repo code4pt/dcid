@@ -10,7 +10,8 @@
 
 ### 0.0.5
 
--
+- Vote on proposals, using `thumbs_up` gem
+- Design tweaks
 
 ### 0.0.4
 

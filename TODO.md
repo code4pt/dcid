@@ -1,9 +1,10 @@
 ## NOW!
 
-- Vote on proposals
 - Use bootstrap 3
 - Design: make explanation of CC/BI a popup
+- Update vote counts dinamically (AJAX)
 
+<del>- Vote on proposals</del>
 
 ## Backlog
 
