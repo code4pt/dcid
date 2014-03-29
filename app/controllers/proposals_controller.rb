@@ -31,34 +31,30 @@ class ProposalsController < ApplicationController
   end
 
   def vote_for
+    # TODO show updated number to user AJAX: http://goo.gl/byMMZ2
     begin
       current_user.vote_for(@proposal = Proposal.find(params[:id]))
       flash[:success] = "Voto efectuado."
-      # TODO show updated number to user AJAX
-      if params[:id] != nil
-        redirect_to @proposal
-      else
-        redirect_to proposals_path
-      end
     rescue ActiveRecord::RecordInvalid
       flash[:error] = "Voto não efectuado: só pode votar uma vez e não pode alterá-lo."
-      redirect_to proposals_path
+    end
+    respond_to do |format|
+      format.js
+      format.html {redirect_to :back}
     end
   end
 
   def vote_against
+    # TODO show updated number to user AJAX: http://goo.gl/byMMZ2
     begin
       current_user.vote_against(@proposal = Proposal.find(params[:id]))
-      # TODO show updated number to user
       flash[:success] = "Voto efectuado."
-      if params[:id] != nil
-        redirect_to @proposal
-      else
-        redirect_to proposals_path
-      end
     rescue ActiveRecord::RecordInvalid
       flash[:error] = "Voto não efectuado: só pode votar uma vez e não pode alterá-lo."
-      redirect_to proposals_path
+    end
+    respond_to do |format|
+      format.js
+      format.html {redirect_to :back}
     end
   end
 
