@@ -1,6 +1,7 @@
 class Proposal < ActiveRecord::Base
 
   belongs_to :user
+  acts_as_voteable # thumbs_up gem
 
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 60 }
@@ -9,13 +10,16 @@ class Proposal < ActiveRecord::Base
 
   default_scope -> { order('created_at DESC') }
 
-  before_save {
-    self.upvotes = 0
-    self.downvotes = 0
-  }
-
   def score
-    self.upvotes - self.downvotes
+    return self.plusminus
+  end
+
+  def upvotes
+    return self.votes_for
+  end
+
+  def downvotes
+    return self.votes_against
   end
 
   def summary(maxChars)

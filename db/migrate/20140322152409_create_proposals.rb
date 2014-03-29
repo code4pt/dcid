@@ -4,8 +4,6 @@ class CreateProposals < ActiveRecord::Migration
       t.string :title
       t.string :problem
       t.string :solution
-      t.integer :upvotes
-      t.integer :downvotes
       t.integer :user_id
 
       t.timestamps

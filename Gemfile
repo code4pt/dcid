@@ -19,6 +19,8 @@ gem 'jbuilder', '1.0.2'
 gem 'uglifier', '2.1.1'
 gem 'faker', '1.1.2'
 
+gem 'thumbs_up', '~> 0.6.7' # voting
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'

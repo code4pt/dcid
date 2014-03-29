@@ -35,10 +35,7 @@ namespace :db do
       title = Faker::Lorem.sentence(1)
       problem = Faker::Lorem.sentence(4)
       solution = Faker::Lorem.sentence(8)
-      upvotes = rand(100)
-      downvotes = rand(100)
-      users.each { |user| user.proposals.create!(title: title, problem: problem, solution: solution,
-                                                  upvotes: upvotes, downvotes: downvotes) }
+      users.each { |user| user.proposals.create!(title: title, problem: problem, solution: solution) }
     end
   end
 end
