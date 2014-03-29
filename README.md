@@ -5,11 +5,13 @@
 
 [View demo](https://damp-journey-9814.herokuapp.com/)
 
+
 ## Release notes
+
 
 ### 0.0.4
 
--
+- Proposals: show, list, paginate, create, delete, (no edit though)
 
 ### 0.0.3
 
