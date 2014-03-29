@@ -33,10 +33,10 @@ class ProposalsController < ApplicationController
   def vote_for
     begin
       current_user.vote_for(@proposal = Proposal.find(params[:id]))
-      render :nothing => true, :status => 200
+      render Proposal.find(params[:id])
       # TODO show updated number to user
     rescue ActiveRecord::RecordInvalid
-      render :nothing => true, :status => 404
+      render Proposal.find(params[:id])
     end
   end
 
