@@ -5,6 +5,7 @@
 
 <del>- Vote on proposals</del>
 <del>- Design: make explanation of CC/BI a popup</del>
+<del>- Design: create a switch button to toogle public name </del>
 
 ## Backlog
 
