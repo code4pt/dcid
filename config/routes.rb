@@ -1,7 +1,11 @@
 Dcid::Application.routes.draw do
   resources :users
   resources :sessions,  only: [:new, :create, :destroy]
-  resources :proposals, only: [:new, :show, :index, :create, :destroy]
+  resources :proposals, except: [:edit] do
+    member do
+      post :vote_for, :vote_against
+    end
+  end
 
   root 'static_pages#home'
 

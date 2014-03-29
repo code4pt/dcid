@@ -1,5 +1,5 @@
 class ProposalsController < ApplicationController
-  before_action :signed_in_user, only: [:new, :create, :index, :destroy]
+  before_action :signed_in_user, only: [:new, :create, :index, :destroy, :vote_for, :vote_against]
   before_action :correct_user,   only: :destroy
 
   def index
@@ -28,6 +28,26 @@ class ProposalsController < ApplicationController
     @proposal.destroy
     flash[:success] = "Proposta apagada."
     redirect_to user_path(current_user)
+  end
+
+  def vote_for
+    begin
+      current_user.vote_for(@proposal = Proposal.find(params[:id]))
+      render :nothing => true, :status => 200
+      # TODO show updated number to user
+    rescue ActiveRecord::RecordInvalid
+      render :nothing => true, :status => 404
+    end
+  end
+
+  def vote_against
+    begin
+      current_user.vote_against(@proposal = Proposal.find(params[:id]))
+      render :nothing => true, :status => 200
+      # TODO show updated number to user
+    rescue ActiveRecord::RecordInvalid
+      render :nothing => true, :status => 404
+    end
   end
 
 
