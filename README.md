@@ -11,7 +11,7 @@
 ### 0.0.5
 
 - Vote on proposals, using `thumbs_up` gem
-- Design tweaks
+- Design tweaks: tooltip on BI/CC
 
 ### 0.0.4
 
