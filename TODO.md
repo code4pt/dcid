@@ -5,6 +5,7 @@
 - Use bootstrap 3
 - Update vote counts dinamically (AJAX)
 
+<del>Design: create a switch button to toogle public name </del>
 
 ## Backlog
 

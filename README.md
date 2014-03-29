@@ -11,7 +11,7 @@
 ### 0.0.5
 
 - Vote on proposals, using `thumbs_up` gem
-- Design tweaks: tooltip on BI/CC
+- Design tweaks: tooltip on BI/CC, a switch button to toogle public name
 - Users can choose to make their name hidden
 
 ### 0.0.4
