@@ -11,16 +11,25 @@ class User < ActiveRecord::Base
   validates :citizen_number, presence: true, format: { with: VALID_CITIZEN_NUMBER_REGEX }, uniqueness: true
   validates :password, length: { minimum: 6 }
 
-  before_save { self.email = email.downcase }
+  before_save {
+    self.email = email.downcase
+    self.is_name_public = true
+  }
   before_create :create_remember_token
 
 
   def first_name
-    self.name.split(' ').first
+    if is_name_public
+      self.name.split(' ').first
+    else 'Anónimo'
+    end
   end
 
   def last_name
-    self.name.split(' ').last
+    if is_name_public
+      self.name.split(' ').last
+    else ''
+    end
   end
 
   def short_name
