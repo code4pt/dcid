@@ -5,6 +5,7 @@
 
 <del>- Vote on proposals</del>
 <del>- Design: make explanation of CC/BI a popup</del>
+<del>- Users can choose to make their name hidden</del>
 
 ## Backlog
 

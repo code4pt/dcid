@@ -12,6 +12,7 @@
 
 - Vote on proposals, using `thumbs_up` gem
 - Design tweaks: tooltip on BI/CC
+- Users can choose to make their name hidden
 
 ### 0.0.4
 
