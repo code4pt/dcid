@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 20140330173859) do
     t.string   "title"
     t.string   "problem"
     t.string   "solution"
-    t.integer  "upvotes"
-    t.integer  "downvotes"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -35,8 +33,7 @@ ActiveRecord::Schema.define(version: 20140330173859) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
-    t.integer  "is_public_name"
-    t.boolean  "is_name_public"
+    t.boolean  "is_name_public",  default: true
   end
 
   add_index "users", ["citizen_number"], name: "index_users_on_citizen_number", unique: true

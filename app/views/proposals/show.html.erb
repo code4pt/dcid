@@ -14,7 +14,7 @@
       </div>
       <div class="span3 text-center">
         <p><%= render 'shared/vote_buttons', :proposal => @proposal %></p>
-        <p><%= render 'shared/link_to_user', :user => @user %> em <%= @proposal.created_at.to_time.strftime('%e/%m/%Y') %></p>
+        <p><%= render 'shared/link_to_user', :user => @proposal.user %> em <%= @proposal.created_at.to_time.strftime('%e/%m/%Y') %></p>
         <% if current_user?(@proposal.user) %>
           <%= link_to '<button class="btn btn-small">Apagar proposta</button>'.html_safe, @proposal,
                 method: :delete, data: { confirm: "De certeza?" }, title: @proposal.title %>

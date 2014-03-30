@@ -1,0 +1,9 @@
+<% if user.is_name_public %>
+
+  <%= link_to user.short_name, user %> PUB
+
+<% else %>
+
+  <%= user.short_name %> HID
+
+<% end %>
