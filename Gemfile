@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
-#ruby-gemset=railstutorial_rails_4_0
+#ruby-gemset=dcid
 
 gem 'rails', '4.0.3'
 gem 'bcrypt-ruby', '3.1.2'

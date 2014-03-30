@@ -24,7 +24,9 @@
 
           <h3>Privacidade</h3>
           <%= f.label "Nome público" %>
-          ON/OFF
+
+
+          <!--<input type="checkbox" name="name_switch" checked data-size="small" data-on-color="success" data-on-text="Sim" data-off-text="Não">-->
 
           <%= f.label "Imagem pública" %>
           <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
@@ -38,3 +40,10 @@
 
   </div>
 </div>
+
+
+<% content_for :head do %>
+  <script type="text/javascript">
+    $("[name='name_switch']").bootstrapSwitch();
+  </script>
+<% end %>
