@@ -9,6 +9,7 @@ gem 'will_paginate', '3.0.4'
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-switch-rails', '~> 2.0.2'
 gem 'font-awesome-rails', '~> 4.0.3.1'
 gem 'actionview-encoded_mail_to'
 
