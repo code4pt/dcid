@@ -32,6 +32,7 @@ GEM
     bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
+    bootstrap-switch-rails (2.0.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.1.4)
@@ -174,6 +175,7 @@ DEPENDENCIES
   actionview-encoded_mail_to
   bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 2.3.2.0)
+  bootstrap-switch-rails (~> 2.0.2)
   bootstrap-will_paginate (= 0.0.9)
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
