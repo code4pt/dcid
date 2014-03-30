@@ -15,8 +15,6 @@ FactoryGirl.define do
       title "To do something about"
       problem "It is wrong that..."
       solution "We should... because..."
-      upvotes "0"
-      downvotes "0"
       user
     end
 end

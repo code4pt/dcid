@@ -24,7 +24,7 @@ describe "User pages" do
       before do
         fill_in "Nome",                       with: "Alice Wonderland"
         fill_in "Email",                      with: "alice@wonderland.com"
-        fill_in "Número do BI/CC *",          with: "100100100"
+        fill_in "Número do BI/CC",            with: "100100100"
         fill_in "Palavra-chave",              with: "secret"
         fill_in "Repita a palavra-chave",     with: "secret"
       end
