@@ -23,6 +23,7 @@
           <%= f.password_field :password_confirmation, placeholder: "Só para confirmar" %>
 
           <h3>Privacidade</h3>
+
           <%= f.label :political_party, "Partido político" %>
           <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %>
           <br>
@@ -42,3 +43,10 @@
 
   </div>
 </div>
+
+
+<% content_for :head do %>
+  <script type="text/javascript">
+    $("[name='name_switch']").bootstrapSwitch();
+  </script>
+<% end %>
