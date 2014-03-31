@@ -1,11 +1,10 @@
 ## NOW!
 
+- Move deploy to custom domain
+- Error pages, 404 not found
 - Use bootstrap 3
 - Update vote counts dinamically (AJAX)
 
-<del>- Vote on proposals</del>
-<del>- Design: make explanation of CC/BI a popup</del>
-<del>- Users can choose to make their name hidden</del>
 
 ## Backlog
 
