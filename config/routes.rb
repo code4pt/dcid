@@ -19,7 +19,7 @@ Dcid::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
   unless Rails.application.config.consider_all_requests_local
-    match '*not_found', to: 'errors#error_404'
+    match '*not_found', to: 'errors#error_404', via: 'get'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
