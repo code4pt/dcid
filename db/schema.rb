@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140330173859) do
+ActiveRecord::Schema.define(version: 20140405133333) do
 
   create_table "proposals", force: true do |t|
     t.string   "title"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140330173859) do
     t.string   "remember_token"
     t.boolean  "admin",           default: false
     t.boolean  "is_name_public",  default: true
+    t.string   "political_party", default: ""
   end
 
   add_index "users", ["citizen_number"], name: "index_users_on_citizen_number", unique: true

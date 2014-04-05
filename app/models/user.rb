@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :citizen_number, presence: true, format: { with: VALID_CITIZEN_NUMBER_REGEX }, uniqueness: true
   validates :password, length: { minimum: 6 }
 
-  before_save { self.email = email.downcase }
+  before_save { self.email = email.downcase; self.political_party = political_party.delete(' ').upcase }
   before_create :create_remember_token
 
 

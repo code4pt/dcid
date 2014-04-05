@@ -1,9 +1,27 @@
 <% if user.is_name_public %>
-
-  <%= link_to user.short_name, user %> PUB
-
+  <%= link_to user.short_name, user %>
 <% else %>
+  <%= user.short_name %>
+<% end %>
 
-  <%= user.short_name %> HID
-
+<% if not user.political_party.empty? %>
+  <% if    user.political_party == 'PSD' or user.political_party == 'PPD/PSD' %>
+    <span class="label label-warning">
+  <% elsif user.political_party == 'CDS' or user.political_party == 'CDS-PP' %>
+    <span class="label label-info">
+  <% elsif user.political_party == 'PS' %>
+    <span class="label label-pink">
+  <% elsif user.political_party == 'PCP' %>
+    <span class="label label-important">
+  <% elsif user.political_party == 'BE' %>
+    <span class="label label-inverse">
+  <% elsif user.political_party == 'PEV'   or
+           user.political_party == 'LIVRE' or
+           user.political_party == 'PAN'   or
+           user.political_party == 'MPT' %>
+    <span class="label label-success">
+  <% else %>
+    <span class="label">
+  <% end %>
+  <%= user.political_party %></span>
 <% end %>
