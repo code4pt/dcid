@@ -13,6 +13,7 @@
 - Vote on proposals, using `thumbs_up` gem
 - Design tweaks: tooltip on BI/CC, a switch button to toogle public name
 - Users can choose to make their name hidden
+- Users can choose a political party , that's displayed next to their name
 
 ### 0.0.4
 
