@@ -28,8 +28,8 @@
           <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %>
           <br>
 
-          <%= f.check_box :is_name_public, class: "checkbox inline" %>&nbsp;Nome público
-          <br>
+          <%= f.label :is_name_public, "Nome público" %>
+          <%= f.check_box :is_name_public %>
 
           <%= f.label "Imagem pública" %>
           <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
@@ -47,6 +47,8 @@
 
 <% content_for :head do %>
   <script type="text/javascript">
-    $("[name='name_switch']").bootstrapSwitch();
+  $(document).ready(function() {
+    $('input:checkbox').bootstrapSwitch();
+  });
   </script>
 <% end %>

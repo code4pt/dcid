@@ -11,6 +11,6 @@
  *= require_self
  *= require_tree .
  *= require bootstrap-responsive.css
- *= require bootstrap2-switch
+ *= require bootstrap3-switch
  *= require font-awesome
  */
