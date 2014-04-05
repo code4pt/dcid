@@ -24,15 +24,16 @@
 
           <h3>Privacidade</h3>
 
-          <%= f.label :political_party, "Partido político" %>
-          <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %>
-          <br>
-
           <%= f.label :is_name_public, "Nome público" %>
-          <%= f.check_box :is_name_public %>
+          <%= f.check_box :is_name_public, :data => { :size=>'small', 'on-color'=>'success', 'on-text'=>'SIM', 'off-text'=>'NÃO' } %>
+          <br><br>
 
           <%= f.label "Imagem pública" %>
           <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
+          <br><br>
+
+          <%= f.label :political_party, "Partido político" %>
+          <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %> <small>(será sempre mostrado ao lado do seu nome)</small>
           <br><br>
 
           <%= f.submit "Guardar alterações", class: "btn btn-success" %>
