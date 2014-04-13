@@ -1,20 +1,20 @@
 <% if signed_in? %>
 
-  <%= link_to vote_for_proposal_path(proposal), :class => "btn btn-success", :title => "Concordo com esta proposta.", :method => :post do %>
+  <%= link_to vote_for_proposal_path(proposal), :class => "btn btn-default btn-success", :title => "Concordo com esta proposta.", :method => :post do %>
     <b><i class="fa fa-thumbs-up"></i>&nbsp;<%= proposal.upvotes %></b>
   <% end %>
   &nbsp;
-  <%= link_to vote_against_proposal_path(proposal), :class => "btn btn-danger", :title => "Discordo desta proposta", :method => :post do %>
+  <%= link_to vote_against_proposal_path(proposal), :class => "btn btn-default btn-danger", :title => "Discordo desta proposta", :method => :post do %>
     <b><i class="fa fa-thumbs-down"></i>&nbsp;<%= proposal.downvotes %></b>
   <% end %>
 
 <% else %>
 
-  <%= link_to signin_path, :class => "btn btn-success disabled", :title => "Precisa estar autenticado para votar." do %>
+  <%= link_to signin_path, :class => "btn btn-default btn-success disabled", :title => "Precisa estar autenticado para votar." do %>
     <b><i class="fa fa-thumbs-up"></i>&nbsp;<%= proposal.upvotes %></b>
   <% end %>
   &nbsp;
-  <%= link_to signin_path, :class =>"btn btn-danger disabled", :title => "Precisa estar autenticado para votar." do %>
+  <%= link_to signin_path, :class =>"btn btn-default btn-danger disabled", :title => "Precisa estar autenticado para votar." do %>
     <b><i class="fa fa-thumbs-down"></i>&nbsp;<%= proposal.downvotes %></b>
   <% end %>
 

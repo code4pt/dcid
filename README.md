@@ -16,6 +16,10 @@ Live demo at [www.dcid.org](http://www.dcid.org/)
 
 ### Release notes
 
+#### 0.1.0
+
+- Migrate design to use Twitter Bootstrap 3.0
+
 #### 0.0.7
 
 - Moved all configrations and passwords into a single configuration file
