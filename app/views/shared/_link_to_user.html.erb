@@ -6,20 +6,20 @@
 
 <% if not user.political_party.empty? %>
   <% if    user.political_party == 'PSD' or user.political_party == 'PPD/PSD' %>
-    <span class="label label-warning">
+    <span class="label label-default label-warning">
   <% elsif user.political_party == 'CDS' or user.political_party == 'CDS-PP' %>
-    <span class="label label-info">
+    <span class="label label-default label-info">
   <% elsif user.political_party == 'PS' %>
-    <span class="label label-pink">
+    <span class="label label-default label-pink">
   <% elsif user.political_party == 'PCP' %>
-    <span class="label label-important">
+    <span class="label label-default label-danger">
   <% elsif user.political_party == 'BE' %>
-    <span class="label label-inverse">
+    <span class="label label-default label-inverse">
   <% elsif user.political_party == 'PEV'   or
            user.political_party == 'LIVRE' or
            user.political_party == 'PAN'   or
            user.political_party == 'MPT' %>
-    <span class="label label-success">
+    <span class="label label-default label-success">
   <% else %>
     <span class="label">
   <% end %>

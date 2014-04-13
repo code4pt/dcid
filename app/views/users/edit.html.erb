@@ -1,12 +1,12 @@
 <% provide(:title, "Editar definições") %>
 
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
 
     <h1>Edite as suas definições</h1>
 
     <div class="row">
-      <div class="span6 offset3">
+      <div class="col-md-6 offset3">
         <%= form_for(@user) do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
 
@@ -36,8 +36,8 @@
           <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %> <small>(será sempre mostrado ao lado do seu nome)</small>
           <br><br>
 
-          <%= f.submit "Guardar alterações", class: "btn btn-success" %>
-          <%= link_to '<button class="btn">Cancelar</button>'.html_safe, current_user %>
+          <%= f.submit "Guardar alterações", class: "btn btn-default btn-success" %>
+          <%= link_to '<button class="btn btn-default">Cancelar</button>'.html_safe, current_user %>
         <% end %>
       </div>
     </div>

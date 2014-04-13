@@ -1,22 +1,22 @@
 <% provide(:title, @proposal.title) %>
 
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
     <h2><%= @proposal.title %></h2>
     <br>
     <div class="row">
-      <div class="span9">
+      <div class="col-md-9">
         <p><%= @proposal.problem %></p>
         <br>
         <h3>Solução</h3>
         <p><%= @proposal.solution %></p>
-        <br class="visible-phone"> <!-- separates text -->
+        <br class="visible-xs"> <!-- separates text -->
       </div>
-      <div class="span3 text-center">
+      <div class="col-md-3 text-center">
         <p><%= render 'shared/vote_buttons', :proposal => @proposal %></p>
         <p><%= render 'shared/link_to_user', :user => @proposal.user %> em <%= @proposal.created_at.to_time.strftime('%e/%m/%Y') %></p>
         <% if current_user?(@proposal.user) %>
-          <%= link_to '<button class="btn btn-small">Apagar proposta</button>'.html_safe, @proposal,
+          <%= link_to '<button class="btn btn-default btn-sm">Apagar proposta</button>'.html_safe, @proposal,
                 method: :delete, data: { confirm: "De certeza?" }, title: @proposal.title %>
         <% end %>
       </div>
