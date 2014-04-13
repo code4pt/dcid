@@ -1,8 +1,8 @@
 <% provide(:title, 'Erro: página não encontrada') %>
 
 <div class="row">
-  <div class="span12">
-    <h1 class="text-error">Página não encontrada</h1>
+  <div class="col-md-12">
+    <h1 class="text-danger">Página não encontrada</h1>
     <p>Tentou aceder a '<%= @not_found_path %>', mas essa página não existe.</p>
     <p>De certeza que é esse o caminho? Para <%= link_to 'voltar ao caminho certo, siga por aqui', root_path %>.</p>
   </div>

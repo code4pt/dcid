@@ -1,11 +1,11 @@
 <% provide(:title, 'Propostas') %>
 
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
 
     <h1>Todas as propostas</h1>
 
-    <p><%= link_to '<button class="btn btn-success pull-right">Criar proposta</button>'.html_safe, new_proposal_path %></p>
+    <p><%= link_to '<button class="btn btn-default btn-success pull-right">Criar proposta</button>'.html_safe, new_proposal_path %></p>
     <br><br><br>
 
     <% if @proposals.empty? %>

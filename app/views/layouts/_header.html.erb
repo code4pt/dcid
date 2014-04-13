@@ -1,9 +1,23 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to image_tag("logo-dcid.png", alt: "DCID", width: "75"), root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to image_tag("logo-dcid.png", alt: "DCID", width: "75"), root_path, id: "logo" %>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!-- left buttons, EMPTY for now -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
           <% if signed_in? %>
             <li><%= link_to '<i class="fa fa-comment"></i> Propostas'.html_safe, proposals_path %></li>
             <li><%= link_to '<i class="fa fa-tags"></i> Temas'.html_safe, tags_path %></li>
@@ -22,7 +36,7 @@
             <li><%= link_to '<i class="fa fa-sign-in fa-fw"></i> Entrar'.html_safe, signin_path %></li>
           <% end %>
         </ul>
-      </nav>
-    </div>
-  </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 </header>
