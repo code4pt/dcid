@@ -2,14 +2,6 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
 
-    # Create admin user
-    admin = User.create!(name: "Admin User",
-                         email: "admin@dcid.org",
-                         password: "dcidadmin",
-                         password_confirmation: "dcidadmin",
-                         citizen_number: "90909999",
-                         admin: true)
-
     # Create base user
     User.create!(name: "Dummy User",
                  email: "example@railstutorial.org",
@@ -37,5 +29,17 @@ namespace :db do
       solution = Faker::Lorem.sentence(8)
       users.each { |user| user.proposals.create!(title: title, problem: problem, solution: solution) }
     end
+  end
+
+  desc "Create admin user"
+  task create_admin: :environment do
+
+    # Create admin user
+    admin = User.create!(name: "Administrador",
+                         email: "admin@dcid.org",
+                         password: "dcidadmin9!",
+                         password_confirmation: "dcidadmin9!",
+                         citizen_number: "99999990",
+                         admin: true)
   end
 end

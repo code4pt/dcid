@@ -30,7 +30,11 @@ class User < ActiveRecord::Base
   end
 
   def short_name
-    first_name + ' ' + last_name
+    if(first_name != last_name)
+      first_name + ' ' + last_name
+    else
+      first_name
+    end
   end
 
   def welcome_name
