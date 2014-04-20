@@ -1,6 +1,5 @@
 ## NOW!
 
-- Move deploy to custom domain
 - Use bootstrap 3
 - Update vote counts dinamically (AJAX)
 
