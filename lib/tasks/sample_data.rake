@@ -47,10 +47,9 @@ namespace :db do
                          admin: true)
   end
 
-  desc "populate with realistic user and proposals"
-  task populate_realistic: :environment do
+  desc "populate with realistic dummy users"
+  task populate_realistic_users: :environment do
 
-    # Create realistic dummy user
     User.create!(name: "Ricardo Salgueiro",
                  email: "ricardo.salgueiro@example.com",
                  password: "52a5lG*S@DMu1S8c",
@@ -105,8 +104,11 @@ namespace :db do
                  password_confirmation: "52a5lG*S@DMu1S8c",
                  citizen_number: "98765408",
                  political_party: "")
+  end
 
-    # Create realistic dummy proposals
+  desc "populate with realistic dummy proposals"
+  task populate_realistic_users: :environment do
+
     user = User.find_by(citizen_number: "98765405")
     title = "Fim dos dinheiros públicos para as touradas"
     problem = "É injusto e imoral que os dinheiros públicos sejam utilizados na perpetuação das touradas em Portugal. A realização de touradas em Portugal depende dos subsídios para a criação de touros e de diversos apoios das autarquias. Estes apoios custam anualmente ao Estado português cerca de 16 milhões € que podiam ser utilizados de forma mais útil e saudável."
