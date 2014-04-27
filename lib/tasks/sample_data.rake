@@ -107,7 +107,7 @@ namespace :db do
   end
 
   desc "populate with realistic dummy proposals"
-  task populate_realistic_users: :environment do
+  task populate_realistic_proposals: :environment do
 
     user = User.find_by(citizen_number: "98765405")
     title = "Fim dos dinheiros públicos para as touradas"
