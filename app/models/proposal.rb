@@ -2,6 +2,7 @@ class Proposal < ActiveRecord::Base
 
   belongs_to :user
   acts_as_voteable # thumbs_up gem
+  acts_as_taggable # acts_as_taggable_on gem
 
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 60 }
