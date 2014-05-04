@@ -1,0 +1,6 @@
+<% if tags.any? %>
+  <% tags.each do |tag_name| %>
+    <%= render 'shared/tag_label', :tag => tag_name %>&nbsp;
+  <% end %>
+  <br>
+<% end %>

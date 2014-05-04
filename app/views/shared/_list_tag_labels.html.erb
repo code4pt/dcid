@@ -1,0 +1,5 @@
+<% if tags.any? %>
+  <% tags.each do |tag_name| %>
+    <span class="text-center"><%= render 'shared/tag_label', :tag => tag_name %></span><br>
+  <% end %>
+<% end %>

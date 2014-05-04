@@ -13,11 +13,14 @@
           <%= f.text_field :title, maxlength: 60, placeholder: "Uma frase a que seja possível responder 'Sim' ou 'Não'" %>
 
           <%= f.label :problem, "Problema" %>
-          <%= f.text_area :problem, rows: 5, maxlength: 400, placeholder: "(max. 400 caract.)"  %>
+          <%= f.text_area :problem, rows: 5, maxlength: 500, placeholder: "(max. 500 caract.)"  %>
 
           <div id="solution_field"></div>
           <%= f.label :solution, "Solução" %>
-          <%= f.text_area :solution, rows: 8, maxlength: 700, placeholder: "(max. 700 caract.)" %>
+          <%= f.text_area :solution, rows: 8, maxlength: 1000, placeholder: "(max. 1000 caract.)" %>
+
+          <%= f.label :tag_list, "Temas" %>
+          <%= f.text_field :tag_list, maxlength: 255, placeholder: "separados, por, vírgulas"  %>
 
           <br>
           <%= f.submit "Submeter", class: "btn btn-success" %>
