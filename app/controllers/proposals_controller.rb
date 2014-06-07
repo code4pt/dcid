@@ -58,6 +58,14 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def tagged
+    if params[:tag].present?
+      @proposals = Proposal.tagged_with(params[:tag])
+    else
+      @proposals = Proposal.all
+    end
+  end
+
 
   private
 
