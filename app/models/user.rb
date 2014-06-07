@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase; self.political_party = political_party.delete(' ').upcase }
   before_create :create_remember_token
 
+  default_scope -> { order('created_at DESC') }
+
 
   def first_name
     if is_name_public
