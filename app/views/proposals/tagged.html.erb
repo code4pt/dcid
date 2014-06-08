@@ -1,9 +1,9 @@
-<% provide(:title, 'Propostas por tema') %>
+<% provide(:title, "Propostas do tema: #{params[:tag]}") %>
 
 <div class="row">
   <div class="span12">
 
-    <h1>Tema <%= :tag.to_s %></h1>
+    <h1>Propostas do tema "<%= params[:tag] %>"</h1>
 
     <p><%= link_to '<button class="btn btn-success pull-right">Criar proposta</button>'.html_safe, new_proposal_path %></p>
     <br><br><br>
