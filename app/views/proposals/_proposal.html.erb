@@ -6,6 +6,7 @@
     </div>
     <div class="span9">
       <h4><%= link_to proposal.title, proposal %></h4>
+      <%= render 'shared/span_tag_labels', :tags => proposal.tag_list %>
       <small class="muted">Proposto por <%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
     </div>
   </div>

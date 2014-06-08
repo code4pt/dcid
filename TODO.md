@@ -1,11 +1,12 @@
 ## NOW!
 
 - Use bootstrap 3
-- Update vote counts dinamically (AJAX)
+- Update vote count totals dinamically (AJAX)
 
 ## Backlog
 
-- Data model: Tags/Categories
+<del>Data model: Tags/Categories</del>
+
 - Use https://github.com/charlotte-ruby/versionator to manage versions
 
 

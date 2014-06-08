@@ -9,6 +9,9 @@ Dcid::Application.routes.draw do
 
   root 'static_pages#home'
 
+  get   '/tags/:tag', to: 'proposals#tagged',   :as => 'tag'
+  match '/tags',      to: 'proposals#tags',     via: 'get'
+
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/how',     to: 'static_pages#how',     via: 'get'

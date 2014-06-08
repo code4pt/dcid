@@ -2,11 +2,14 @@ class Proposal < ActiveRecord::Base
 
   belongs_to :user
   acts_as_voteable # thumbs_up gem
+  acts_as_taggable # acts_as_taggable_on gem
 
   validates :user_id, presence: true
   validates :title, presence: true, length: { maximum: 60 }
   validates :problem, presence: true, length: { maximum: 400 }
   validates :solution, presence: true, length: { maximum: 700 }
+
+  before_save :normalize_tags
 
   default_scope -> { order('created_at DESC') }
 
@@ -20,6 +23,14 @@ class Proposal < ActiveRecord::Base
 
   def downvotes
     return self.votes_against
+  end
+
+  def normalize_tags
+    # Make lowercase
+    self.tag_list.map!(&:downcase)
+
+    # Replace any non-word ([^\w]) characters with a hyphen
+    self.tag_list.map! {|tag| tag.gsub(/[^\w]+/i,'-')}
   end
 
   def summary(maxChars)

@@ -58,11 +58,20 @@ class ProposalsController < ApplicationController
     end
   end
 
+  # ==== Begin of tag related views
+  def tagged
+    if params[:tag].present?
+      @proposals = Proposal.tagged_with(params[:tag])
+    else
+      @proposals = []
+    end
+  end
+  # ==== End of tag related views
 
   private
 
     def proposal_params
-      params.require(:proposal).permit(:title, :problem, :solution)
+      params.require(:proposal).permit(:title, :problem, :solution, :tag_list)
     end
 
     def correct_user
