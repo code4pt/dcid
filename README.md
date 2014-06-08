@@ -9,7 +9,7 @@ Live demo at [www.dcid.org](http://www.dcid.org/)
 ### Release notes
 
 #### 0.0.6
-- Added basic tagging system (tags separated by commas, auto-hypheneted, tags index page, tags link to page showing proposals with that tag)
+- Added basic tagging system using `acts-as-taggable-on` gem (tags separated by commas, auto-hypheneted, tags index page, tags link to page showing proposals with that tag)
 - Tweaks here and there
 
 #### 0.0.5
