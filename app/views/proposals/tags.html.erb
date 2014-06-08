@@ -1,0 +1,21 @@
+<% provide(:title, 'Temas') %>
+
+<div class="row">
+  <div class="span12">
+
+    <h1>Todos os temas</h1>
+
+    <p>Um tema é uma ou mais palavras-chave que categorizam uma proposta. Estes temas agrupam propostas relacionadas e tornam mais fácil outros cidadãos encontrarem a sua proposta.</p>
+    <br>
+
+    <div>
+      <div> <!-- as seen on goo.gl/mJiwTA needs refactor -->
+        <% tag_cloud Proposal.tag_counts.sort_by!{ |tag| tag.name }, %w[s m l] do |tag| %>
+          <%= link_to tag.name, tag_path(tag.name), class: 'badge' %>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+</div>

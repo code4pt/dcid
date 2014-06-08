@@ -8,9 +8,13 @@
     <p><%= link_to '<button class="btn btn-success pull-right">Criar proposta</button>'.html_safe, new_proposal_path %></p>
     <br><br><br>
 
-    <ul>
-      <%= render @proposals %>
-    </ul>
+    <% if @proposals.empty? %>
+        <p class="text-center">Não foram encontradas propostas.</p>
+      <% else %>
+        <ul>
+          <%= render @proposals %>
+        </ul>
+    <% end %>
 
   </div>
 </div>

@@ -58,6 +58,7 @@ class ProposalsController < ApplicationController
     end
   end
 
+  # ==== Begin of tag related views
   def tagged
     if params[:tag].present?
       @proposals = Proposal.tagged_with(params[:tag])
@@ -65,7 +66,7 @@ class ProposalsController < ApplicationController
       @proposals = []
     end
   end
-
+  # ==== End of tag related views
 
   private
 
