@@ -62,7 +62,7 @@ class ProposalsController < ApplicationController
     if params[:tag].present?
       @proposals = Proposal.tagged_with(params[:tag])
     else
-      @proposals = Proposal.all
+      @proposals = []
     end
   end
 
