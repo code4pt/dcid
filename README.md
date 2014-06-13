@@ -6,9 +6,8 @@ DCID
 Live demo at [www.dcid.org](http://www.dcid.org/)
 
 
-### License
-
-This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt).
+- **License**: This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt).
+- **Development plan**: This project is managed using a [Trello board](https://trello.com/b/36itFGvs/dcid).
 
 
 ### Release notes
