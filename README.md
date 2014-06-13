@@ -6,6 +6,11 @@ DCID
 Live demo at [www.dcid.org](http://www.dcid.org/)
 
 
+### License
+
+This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt).
+
+
 ### Release notes
 
 #### 0.0.6
