@@ -17,7 +17,10 @@
         <p><%= render 'shared/list_tag_labels', :tags => @proposal.tag_list %></p>
         <p><%= render 'shared/link_to_user', :user => @proposal.user %> em <%= @proposal.created_at.to_time.strftime('%e/%m/%Y') %></p>
         <% if current_user.admin? || current_user?(@proposal.user) %>
-          <%= link_to '<button class="btn btn-small">Apagar proposta</button>'.html_safe, @proposal,
+          <%= link_to '<button class="btn btn-small"><i class="fa fa-pencil"></i>&nbsp;Editar</button>'.html_safe, edit_proposal_path %>
+        <% end %>
+        <% if current_user.admin? || current_user?(@proposal.user) %>
+          <%= link_to '<button class="btn btn-small"><i class="fa fa-trash-o"></i>&nbsp;Apagar</button>'.html_safe, @proposal,
                 method: :delete, data: { confirm: "De certeza?" }, title: @proposal.title %>
         <% end %>
       </div>

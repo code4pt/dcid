@@ -1,6 +1,6 @@
 class ProposalsController < ApplicationController
-  before_action :signed_in_user, only: [:new, :create, :index, :destroy, :vote_for, :vote_against]
-  before_action :correct_user,   only: :destroy
+  before_action :signed_in_user,        only: [:new, :create, :index, :vote_for, :vote_against]
+  before_action :admin_or_author_user,  only: [:edit, :update, :destroy]
 
   def index
     @proposals = Proposal.paginate(page: params[:page])
@@ -20,11 +20,26 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def edit
+    @proposal = Proposal.find(params[:id])
+  end
+
   def show
     @proposal = Proposal.find(params[:id])
   end
 
+  def update
+    @proposal = Proposal.find(params[:id])  # TODO FIXME this shouldn't be needed
+    if @proposal.update_attributes(proposal_params)
+      flash[:success] = "Proposta alterada."
+      redirect_to @proposal
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
+    @proposal = Proposal.find(params[:id])  # TODO FIXME this shouldn't be needed
     @proposal.destroy
     flash[:success] = "Proposta apagada."
     redirect_to user_path(current_user)
@@ -58,7 +73,7 @@ class ProposalsController < ApplicationController
     end
   end
 
-  # ==== Begin of tag related views
+  # ==== Begin of tag-related views
   def tagged
     if params[:tag].present?
       @proposals = Proposal.tagged_with(params[:tag])
@@ -66,7 +81,7 @@ class ProposalsController < ApplicationController
       @proposals = []
     end
   end
-  # ==== End of tag related views
+  # ==== End of tag-related views
 
   private
 
@@ -74,9 +89,14 @@ class ProposalsController < ApplicationController
       params.require(:proposal).permit(:title, :problem, :solution, :tag_list)
     end
 
-    def correct_user
-      @proposal = current_user.proposals.find_by(id: params[:id])
-      redirect_to root_url if @proposal.nil?
-    end
-end
+    # Before filters
 
+    def admin_or_author_user
+      allowed = current_user.admin?
+      if !allowed
+        @proposal = current_user.proposals.find_by(id: params[:id])
+        redirect_to(root_url) if @proposal.nil?
+      end
+    end
+
+end
