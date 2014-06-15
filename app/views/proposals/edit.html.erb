@@ -1,9 +1,9 @@
-<% provide(:title, 'Criar proposta') %>
+<% provide(:title, 'Editar proposta') %>
 
 <div class="row">
   <div class="span12">
 
-    <h1>A sua proposta</h1>
+    <h1>Edite a sua proposta</h1>
 
     <div class="row">
       <div class="span8 offset2">
@@ -24,7 +24,8 @@
           <%= f.text_field :tag_list, maxlength: 255, placeholder: "separados, por, vírgulas"  %>
 
           <br>
-          <%= f.submit "Submeter", class: "btn btn-success" %>
+          <%= f.submit "Guardar alterações", class: "btn btn-success" %>
+          <%= link_to '<button class="btn">Cancelar</button>'.html_safe, @proposal %>
         <% end %>
       </div>
     </div>
