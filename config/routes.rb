@@ -1,7 +1,7 @@
 Dcid::Application.routes.draw do
   resources :users
   resources :sessions,  only: [:new, :create, :destroy]
-  resources :proposals, except: [:edit] do
+  resources :proposals do
     member do
       post :vote_for, :vote_against
     end

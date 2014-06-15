@@ -1,6 +1,7 @@
 class ProposalsController < ApplicationController
   before_action :signed_in_user, only: [:new, :create, :index, :destroy, :vote_for, :vote_against]
-  before_action :correct_user,   only: :destroy
+  before_action :correct_user,   only: [:edit, :update, :destroy]
+  #before_action :admin_user,     only: [:edit, :update, :destroy]
 
   def index
     @proposals = Proposal.paginate(page: params[:page])
@@ -20,8 +21,21 @@ class ProposalsController < ApplicationController
     end
   end
 
+  def edit
+    @proposal = Proposal.find(params[:id])
+  end
+
   def show
     @proposal = Proposal.find(params[:id])
+  end
+
+  def update
+    if @proposal.update_attributes(proposal_params)
+      flash[:success] = "Proposta alterada."
+      redirect_to @proposal
+    else
+      render 'edit'
+    end
   end
 
   def destroy
@@ -78,5 +92,10 @@ class ProposalsController < ApplicationController
       @proposal = current_user.proposals.find_by(id: params[:id])
       redirect_to root_url if @proposal.nil?
     end
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
+
 end
 
