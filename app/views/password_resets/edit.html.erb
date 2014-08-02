@@ -1,0 +1,30 @@
+<% provide(:title, "Recuperar palavra-chave") %>
+
+<div class="row">
+  <div class="span12">
+    <h1>Recuperar palavra-chave</h1>
+
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+
+          <div class="field">
+            <%= f.label :password, "Nova palavra-chave" %>
+            <%= f.password_field :password %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation, "Repita a nova palavra-chave" %>
+            <%= f.password_field :password_confirmation, placeholder: "Só para confirmar" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Update Password", class: "btn btn-success" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

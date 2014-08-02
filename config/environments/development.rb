@@ -27,6 +27,11 @@ Dcid::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Base URL for Mailers
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  # Mailers configurations
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default :charset => 'utf-8'
+
+  config.after_initialize do
+    Rails.application.routes.default_url_options[:host] = Rails.application.config.action_mailer.default_url_options
+  end
 end
