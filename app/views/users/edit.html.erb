@@ -6,7 +6,7 @@
     <h1>Edite as suas definições</h1>
 
     <div class="row">
-      <div class="col-md-6 offset3">
+      <div class="col-md-6 col-md-offset-3">
         <%= form_for(@user) do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
 
@@ -37,7 +37,7 @@
           <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %>
           <br>
 
-          <%= f.submit "Guardar alterações", class: "btn btn-default btn-success" %>
+          <%= f.submit "Guardar alterações", class: "btn btn-success" %>
           <%= link_to '<button class="btn btn-default">Cancelar</button>'.html_safe, current_user %>
         <% end %>
       </div>
