@@ -9,7 +9,11 @@
       <%= render @users%>
     </ul>
 
-    <%= will_paginate %>
+  </div>
+</div>
 
+<div class="row">
+  <div class="col-md-12 text-center">
+    <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
   </div>
 </div>
