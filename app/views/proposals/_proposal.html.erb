@@ -7,7 +7,15 @@
     <div class="col-md-9">
       <h4><%= link_to proposal.title, proposal %></h4>
       <%= render 'shared/span_tag_labels', :tags => proposal.tag_list %>
-      <small class="text-muted">Proposto por <%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
+      <!--high-res -->
+      <div class="hidden-xs">
+        <br>
+        <small class="text-muted">Proposto por <%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
+      </div>
+      <!--low-res empty space-->
+      <div class="visible-xs-inline hidden-sm hidden-md hidden-lg">
+        <small class="text-muted"><%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
+      </div>
     </div>
   </div>
 </div>
