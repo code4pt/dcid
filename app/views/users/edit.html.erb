@@ -6,7 +6,7 @@
     <h1>Edite as suas definições</h1>
 
     <div class="row">
-      <div class="col-md-6 offset3">
+      <div class="col-md-6 col-md-offset-3">
         <%= form_for(@user) do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
 
@@ -23,6 +23,7 @@
           <%= f.password_field :password_confirmation, placeholder: "Só para confirmar" %>
 
           <h3>Privacidade</h3>
+          <br>
 
           <%= f.label :is_name_public, "Nome público" %>
           <%= f.check_box :is_name_public, :data => { :size=>'small', 'on-color'=>'success', 'on-text'=>'SIM', 'off-text'=>'NÃO' } %>
@@ -32,11 +33,11 @@
           <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
           <br><br>
 
-          <%= f.label :political_party, "Partido político" %>
-          <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %> <small>(será sempre mostrado ao lado do seu nome)</small>
-          <br><br>
+          <%= f.label :political_party, "Partido político" %>&nbsp;<small>(será sempre mostrado ao lado do seu nome)</small>
+          <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %>
+          <br>
 
-          <%= f.submit "Guardar alterações", class: "btn btn-default btn-success" %>
+          <%= f.submit "Guardar alterações", class: "btn btn-success" %>
           <%= link_to '<button class="btn btn-default">Cancelar</button>'.html_safe, current_user %>
         <% end %>
       </div>
