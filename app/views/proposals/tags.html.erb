@@ -11,7 +11,7 @@
     <div>
       <div> <!-- as seen on goo.gl/mJiwTA needs refactor -->
         <% tag_cloud Proposal.tag_counts.sort_by!{ |tag| tag.name }, %w[s m l] do |tag| %>
-          <%= link_to tag.name, tag_path(tag.name), class: 'badge' %>
+          <%= link_to tag.name, tag_path(tag.name), class: 'label' %>
         <% end %>
       </div>
 
