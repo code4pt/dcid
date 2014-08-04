@@ -1,3 +1,1 @@
-<%= link_to tag_path(tag_name), :class => "label", :title => "Ver propostas do mesmo tema" do %>
-  <span><%= tag_name %></span>
-<% end %>
+<a class="label label-default" title="Ver propostas do mesmo tema" href="<%= tag_path(tag_name) %>"><span><%= tag_name %></span></a>
