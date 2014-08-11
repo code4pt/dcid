@@ -6,7 +6,7 @@ DCID
 Live demo at [www.dcid.org](http://www.dcid.org/)
 
 
-- **License**: This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt).
+- **License**: This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt) and held by [Diogo Nunes](http://www.diogonunes.com).
 - **Development plan**: This project is managed using a [Trello board](https://trello.com/b/36itFGvs/dcid).
 
 

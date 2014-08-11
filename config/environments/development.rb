@@ -30,7 +30,6 @@ Dcid::Application.configure do
   # Mailers configurations
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.default :charset => 'utf-8'
-
   config.after_initialize do
     Rails.application.routes.default_url_options[:host] = Rails.application.config.action_mailer.default_url_options
   end
