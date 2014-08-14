@@ -14,9 +14,11 @@ class PasswordResetsController < ApplicationController
   def update
     @user = User.find_by_password_reset_token!(params[:id])
     if @user.password_reset_sent_at < 2.hours.ago
-      redirect_to new_password_reset_path, :alert => "Expirou o tempo para recuperar a palavra-chave. Recomece o processo."
+      flash[:alert] = "Expirou o tempo para recuperar a palavra-chave. Recomece o processo."
+      redirect_to new_password_reset_path
     elsif @user.update_attributes(params.require(:user).permit(:password, :password_confirmation).merge(password_reset_token: nil))
-      redirect_to sign_in(@user), :notice => "A palavra-chave foi alterada."
+      flash[:success] = "A palavra-chave foi alterada."
+      redirect_to sign_in(@user)
     else
       render :edit
     end
