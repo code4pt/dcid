@@ -46,17 +46,6 @@ class User < ActiveRecord::Base
     self.name.split(' ').first # ignores is_public_name
   end
 
-
-  # --- Temporary field for validations
-  def control_numbers
-    self[:control_numbers]
-  end
-  def control_numbers=(value)
-    self[:control_numbers] = value
-  end
-  # ---
-
-
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end

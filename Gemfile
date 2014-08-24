@@ -24,6 +24,7 @@ gem 'thumbs_up', '~> 0.6.7' # voting
 gem 'acts-as-taggable-on', '~> 3.1.0' # tagging
 
 group :development, :test do
+  gem 'debugger'
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
 end
