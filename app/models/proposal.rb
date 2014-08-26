@@ -25,6 +25,10 @@ class Proposal < ActiveRecord::Base
     return self.votes_against
   end
 
+  def total_votes
+    return self.votes_for + self.votes_against
+  end
+
   def normalize_tags
     # Make lowercase
     self.tag_list.map!(&:downcase)

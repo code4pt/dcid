@@ -3,7 +3,11 @@ class ProposalsController < ApplicationController
   before_action :admin_or_author_user,  only: [:edit, :update, :destroy]
 
   def index
-    @proposals = Proposal.paginate(page: params[:page])
+    if params[:order]
+      @proposals = change_order(params[:order]).paginate(page: params[:page])
+    else
+      @proposals = Proposal.paginate(page: params[:page])
+    end
   end
 
   def new
@@ -72,6 +76,29 @@ class ProposalsController < ApplicationController
       format.html {redirect_to :back}
     end
   end
+
+  def change_order(new_order)
+    case new_order
+      when 'recent'
+        proposal_list = Proposal.order('created_at DESC')
+      when 'voted'
+        proposal_list = Proposal.all.sort { |p1, p2| p1.total_votes <=> p2.total_votes }
+      when 'popular'
+        # TODO order by view count in the last 30 days
+      when 'polemic'
+        # order by score
+        proposal_list = Proposal.all
+          .select{ |proposal| proposal.total_votes > 0 }
+          .sort{ |p1, p2| p2.score <=> p1.score }
+      else
+        Proposal.order('created_at DESC')
+    end
+   
+    WillPaginate::Collection.create(1, WillPaginate.per_page, proposal_list.length) do |pager|
+      pager.replace proposal_list[pager.offset, pager.per_page].to_a
+    end
+  end
+
 
   # ==== Begin of tag-related views
   def tagged
