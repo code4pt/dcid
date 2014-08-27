@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <%= form_for(@proposal, html: {role: 'form'}) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="form-group">
+      <%= f.label :title, "Título" %>
+      <%= f.text_field :title, maxlength: 60, placeholder: "Uma frase a que seja possível responder 'Sim' ou 'Não'", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :problem, "Problema" %>
+      <%= f.text_area :problem, rows: 5, maxlength: 500, placeholder: "(max. 500 caract.)", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <div id="solution_field"></div>
+      <%= f.label :solution, "Solução" %>
+      <%= f.text_area :solution, rows: 8, maxlength: 1000, placeholder: "(max. 1000 caract.)", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :tag_list, "Temas" %>
+      <%= f.text_field :tag_list, maxlength: 255, placeholder: "separados, por, vírgulas", class: 'form-control' %>
+    </div>
+
+    <br>
+      <% if edit %>
+      <div class="form-group">
+        <%= f.submit "Guardar alterações", class: "pull-right btn btn-success" %>
+        <%= link_to 'Cancelar', @proposal, class: "pull-right btn btn-default" %>
+      </div>
+      <% else %>
+      <%= f.submit "Submeter", class: "btn btn-default btn-success" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
