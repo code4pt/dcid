@@ -80,23 +80,23 @@ class ProposalsController < ApplicationController
   def change_order(new_order)
     case new_order
       when 'recent'
-        proposal_list = Proposal.order('created_at DESC')
+        Proposal.order('created_at DESC')
       when 'voted'
-        proposal_list = Proposal.all.sort { |p1, p2| p1.total_votes <=> p2.total_votes }
+        Proposal.all.sort { |p1, p2| p2.total_votes <=> p1.total_votes }
       when 'popular'
         # TODO order by view count in the last 30 days
       when 'polemic'
         # order by score
-        proposal_list = Proposal.all
+        Proposal.all
           .select{ |proposal| proposal.total_votes > 0 }
           .sort{ |p1, p2| p2.score <=> p1.score }
       else
         Proposal.order('created_at DESC')
     end
    
-    WillPaginate::Collection.create(1, WillPaginate.per_page, proposal_list.length) do |pager|
-      pager.replace proposal_list[pager.offset, pager.per_page].to_a
-    end
+    # WillPaginate::Collection.create(1, WillPaginate.per_page, proposal_list.length) do |pager|
+    #   pager.replace proposal_list[pager.offset, pager.per_page].to_a
+    # end
   end
 
 

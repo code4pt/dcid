@@ -14,19 +14,19 @@ class Proposal < ActiveRecord::Base
   default_scope -> { order('created_at DESC') }
 
   def score
-    return self.plusminus
+    self.plusminus
   end
 
   def upvotes
-    return self.votes_for
+    self.votes_for
   end
 
   def downvotes
-    return self.votes_against
+    self.votes_against
   end
 
   def total_votes
-    return self.votes_for + self.votes_against
+    self.votes_for + self.votes_against
   end
 
   def normalize_tags
@@ -40,10 +40,10 @@ class Proposal < ActiveRecord::Base
   def summary(maxChars)
     summary = self.solution
     if summary.length < maxChars then
-      return summary
+      summary
     else
       indexOfLastCompleteWord = summary.rindex(" ", maxChars-3)   # provides space for the "..." (3 chars)
-      return summary[0, indexOfLastCompleteWord] + "..."
+      summary[0, indexOfLastCompleteWord] + "..."
     end
   end
 end
