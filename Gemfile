@@ -24,6 +24,7 @@ gem 'faker', '1.1.2'
 gem 'thumbs_up', '~> 0.6.7' # voting
 gem 'acts-as-taggable-on', '~> 3.1.0' # tagging
 gem 'figaro', '~> 1.0.0' # passwords & configs
+gem 'impressionist'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

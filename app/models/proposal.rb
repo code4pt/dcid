@@ -1,4 +1,5 @@
 class Proposal < ActiveRecord::Base
+  is_impressionable
 
   belongs_to :user
   acts_as_voteable # thumbs_up gem
