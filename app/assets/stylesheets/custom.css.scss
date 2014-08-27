@@ -71,6 +71,16 @@ textarea {
   }
 }
 
+.logo {
+  max-width: 100%;
+}
+
+@media(min-width: 768px) {
+  .logo {
+    max-width: 350px;
+  }
+}
+
 /* === footer === */
 
 footer {
