@@ -26,4 +26,8 @@ Dcid::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Mailers configurations
+  config.action_mailer.default_url_options = { :host => 'dcid.org' }
+  config.action_mailer.default :charset => 'utf-8'
 end

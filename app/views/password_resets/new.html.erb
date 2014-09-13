@@ -1,0 +1,24 @@
+<% provide(:title, "Recuperar palavra-chave") %>
+
+<div class="row">
+  <div class="span12">
+    <h1>Recuperar palavra-chave</h1>
+
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_tag password_resets_path, :method => :post do %>
+
+          <div class="field">
+            <%= label_tag :email, "Email usado na criação do seu perfil" %>
+            <%= text_field_tag :email, params[:email] %>
+          </div>
+
+          <div class="actions">
+            <%= submit_tag "Pedir nova palavra-chave", class: "btn btn-success" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
