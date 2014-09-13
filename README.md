@@ -6,11 +6,15 @@ DCID
 Live demo at [www.dcid.org](http://www.dcid.org/)
 
 
-- **License**: This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt).
+- **License**: The author [Diogo Nunes](http://github.com/dialex) releases this software under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt).
 - **Development plan**: This project is managed using a [Trello board](https://trello.com/b/36itFGvs/dcid).
 
 
 ### Release notes
+
+#### 0.1.0
+
+- Migrated look to bootstrap 3 (still some issues on flash[:alert] and size of form buttons)
 
 #### 0.0.6
 - Added basic tagging system using `acts-as-taggable-on` gem (tags separated by commas, auto-hypheneted, tags index page, tags link to page showing proposals with that tag)
