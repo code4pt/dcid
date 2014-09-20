@@ -5,10 +5,10 @@ require File.expand_path('../application', __FILE__)
 Dcid::Application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => 'dialexnunes',
-  :password => '8v9Bn%xBywh60!1v',
-  :domain => 'dcid.org',
-  :address => 'smtp.sendgrid.net',
+  :user_name => ENV["MAILER_USER"],
+  :password => ENV["MAILER_PASS"],
+  :domain => ENV["APP_ROOT_DOMAIN"],
+  :address => ENV["MAILER_ADDRESS"],
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
