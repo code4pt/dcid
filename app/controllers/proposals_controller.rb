@@ -90,7 +90,10 @@ class ProposalsController < ApplicationController
           <=> p1.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) }
       when 'polemic'
         Proposal.all
-          .select { |proposal| proposal.total_votes > 0 && proposal.score <= 10 }
+          .select { |proposal| 
+            proposal.total_votes > CONTROVERSIAL_THRESHOLD && 
+            proposal.score <= 0.1*CONTROVERSIAL_THRESHOLD && 
+            proposal.score > -0.1*CONTROVERSIAL_THRESHOLD }
           .sort{ |p1, p2| p2.total_votes <=> p1.total_votes }
       else
         Proposal.order('created_at DESC')
