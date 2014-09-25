@@ -11,7 +11,7 @@ Live demo at [www.dcid.org](http://www.dcid.org/)
 
 ### Set up
 
-1. Create the file `/config/application.yml` as a copy of the existing `application.yml.example`. Fill out the variables according to your deploy.
+1. Create the file `/config/application.yml` as a copy of the existing `application.yml.example`. Fill out the variables according to your deployment.
 
 
 ### Release notes
