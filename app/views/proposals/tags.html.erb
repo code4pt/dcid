@@ -11,7 +11,7 @@
     <div>
       <div> <!-- as seen on goo.gl/mJiwTA needs refactor -->
         <% tag_cloud Proposal.tag_counts.sort_by!{ |tag| tag.name }, %w[s m l] do |tag| %>
-          <%= link_to tag.name, tag_path(tag.name), class: 'label' %>
+          <a class="label label-default" href="<%= tag_path(tag.name) %>"><span><%= tag.name %></span></a>
         <% end %>
       </div>
 

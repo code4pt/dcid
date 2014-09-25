@@ -5,16 +5,19 @@ DCID
 
 Live demo at [www.dcid.org](http://www.dcid.org/)
 
-
-- **License**: This software is released under the [GNU General Public License 3](http://www.gnu.org/licenses/gpl.txt) and held by [Diogo Nunes](http://www.diogonunes.com).
+- **License**: The author [Diogo Nunes](http://github.com/dialex) releases this software under the [GNU GPL 3](http://www.gnu.org/licenses/gpl.txt).
 - **Development plan**: This project is managed using a [Trello board](https://trello.com/b/36itFGvs/dcid).
 
 ### Set up
 
-1. Create the file `/config/application.yml` as a copy of the existing `application.yml.example`. Fill out the variables according to your deployment.
+- Create the file `/config/application.yml` as a copy of the existing `application.yml.example`. Fill out the variables according to your deployment.
 
 
 ### Release notes
+
+#### 0.1.0
+
+- Migrated look to bootstrap 3 (still some issues on flash[:alert] and size of form buttons)
 
 #### 0.0.7
 

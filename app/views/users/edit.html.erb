@@ -1,43 +1,60 @@
 <% provide(:title, "Editar definições") %>
 
 <div class="row">
-  <div class="span12">
+  <div class="col-md-12">
 
     <h1>Edite as suas definições</h1>
 
     <div class="row">
-      <div class="span6 offset3">
-        <%= form_for(@user) do |f| %>
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@user, html: {role: 'form'}) do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
 
-          <%= f.label :name, "Nome" %>
-          <%= f.text_field :name %>
+          <div class="form-group">
+            <%= f.label :name, "Nome" %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
 
-          <%= f.label :email, "Email" %>
-          <%= f.text_field :email %>
+          <div class="form-group">
+            <%= f.label :email, "Email" %>
+            <%= f.text_field :email, type: :email, class: 'form-control' %>
+          </div>
 
-          <%= f.label :password, "Palavra-chave" %>
-          <%= f.password_field :password %>
+          <div class="form-group">
+            <%= f.label :password, "Palavra-chave" %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
 
-          <%= f.label :password_confirmation, "Repita a palavra-chave" %>
-          <%= f.password_field :password_confirmation, placeholder: "Só para confirmar" %>
+          <div class="form-group">
+            <%= f.label :password_confirmation, "Repita a palavra-chave" %>
+            <%= f.password_field :password_confirmation, placeholder: "Só para confirmar", class: 'form-control' %>
+          </div>
 
           <h3>Privacidade</h3>
+          <br>
 
-          <%= f.label :is_name_public, "Nome público" %>
-          <%= f.check_box :is_name_public, :data => { :size=>'small', 'on-color'=>'success', 'on-text'=>'SIM', 'off-text'=>'NÃO' } %>
+          <div class="form-group">
+            <%= f.label :is_name_public, "Nome público" %>
+            <%= f.check_box :is_name_public, :data => { :size=>'small', 'on-color'=>'success', 'on-text'=>'SIM', 'off-text'=>'NÃO' }, class: 'form-control' %>
+          </div>
           <br><br>
 
-          <%= f.label "Imagem pública" %>
-          <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
+          <div class="form-group">
+            <%= f.label "Imagem pública" %>
+            <%= gravatar_for @user %> <a href="http://gravatar.com/emails">alterar</a>
+          </div>
           <br><br>
 
-          <%= f.label :political_party, "Partido político" %>
-          <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small" %> <small>(será sempre mostrado ao lado do seu nome)</small>
-          <br><br>
+          <div class="form-group">
+            <%= f.label :political_party, "Partido político" %>&nbsp;<small>(será sempre mostrado ao lado do seu nome)</small>
+            <%= f.text_field :political_party, placeholder: "SIGLA", :maxlength => 6, class: "input-small form-control" %>
+          </div>
+          <br>
 
-          <%= f.submit "Guardar alterações", class: "btn btn-success" %>
-          <%= link_to '<button class="btn">Cancelar</button>'.html_safe, current_user %>
+          <div class="form-group">
+            <%= f.submit "Guardar alterações", class: "btn btn-success" %>
+            <%= link_to 'Cancelar', current_user, class: "pull-right btn btn-default" %>
+          </div>
         <% end %>
       </div>
     </div>

@@ -1,14 +1,24 @@
 <div class="row-fluid">
-  <div class="span12" style="background-color: #EEEEEE">
-    <div class="span3 text-center" style="background-color: #DDDDDD">
+  <div class="col-md-12" style="background-color: #EEEEEE">
+    <div class="col-md-3 text-center">
       <h3><%= proposal.score %></h3>
       <p><%= render 'shared/vote_buttons', :proposal => proposal %></p>
     </div>
-    <div class="span9">
+    <div class="col-md-9">
       <h4><%= link_to proposal.title, proposal %></h4>
       <%= render 'shared/span_tag_labels', :tags => proposal.tag_list %>
-      <small class="muted">Proposto por <%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
+      <!--high-res -->
+      <div class="hidden-xs">
+        <br>
+        <small class="text-muted">Proposto por <%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
+      </div>
+      <!--low-res empty space-->
+      <div class="visible-xs-inline hidden-sm hidden-md hidden-lg">
+        <small class="text-muted"><%= render 'shared/link_to_user', :user => proposal.user %> em <%= proposal.created_at.to_time.strftime('%e/%m/%Y') %></small>
+      </div>
     </div>
   </div>
 </div>
-<br>
+
+<!--empty line-->
+<div class="row-fluid"><div class="col-md-12"><br></div></div>
