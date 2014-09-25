@@ -86,8 +86,8 @@ class ProposalsController < ApplicationController
       when 'voted'
         Proposal.all.sort { |p1, p2| p2.total_votes <=> p1.total_votes }
       when 'popular'
-        Proposal.all.sort { |p1, p2| p2.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) 
-          <=> p1.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) }
+        Proposal.all.sort { |p1, p2| p2.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) <=> 
+          p1.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) }
       when 'polemic'
         Proposal.all
           .select { |proposal| 

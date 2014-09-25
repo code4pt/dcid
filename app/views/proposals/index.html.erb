@@ -3,24 +3,24 @@
 <div class="row">
   <div class="col-md-12">
 
-      <h1>Todas as propostas</h1>
-      <div class="dropdown pull-right">
-        <button class="btn dropdown-toggle sr-only" type="button" data-toggle="dropdown">
-          Ordenar por
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li role="presentation"><a id="recent" role="menuitem" tabindex="0" href="/proposals?order=recent">Mais recentes</a></li>
-          <li role="presentation"><a id="voted" role="menuitem" tabindex="1" href="/proposals?order=voted">Mais votadas</a></li>
-          <li role="presentation"><a id="popular" role="menuitem" tabindex="2" href="/proposals?order=popular">Mais populares</a></li>
-          <li role="presentation"><a id="polemic" role="menuitem" tabindex="3" href="/proposals?order=polemic">Mais polémicas</a></li>
-        </ul>
-      </div>
+    <h1>Todas as propostas</h1>
 
-      <div class="new-proposal pull-right">
-        <%= link_to '<button class="btn btn-success">Criar proposta</button>'.html_safe, new_proposal_path %>
-      </div>
-    
+    <div class="dropdown pull-right">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+        Ordenar por
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li role="presentation"><a id="recent" role="menuitem" tabindex="0" href="/proposals?order=recent">Mais recentes</a></li>
+        <li role="presentation"><a id="voted" role="menuitem" tabindex="1" href="/proposals?order=voted">Mais votadas</a></li>
+        <li role="presentation"><a id="popular" role="menuitem" tabindex="2" href="/proposals?order=popular">Mais populares</a></li>
+        <li role="presentation"><a id="polemic" role="menuitem" tabindex="3" href="/proposals?order=polemic">Mais polémicas</a></li>
+      </ul>
+    </div>
+    <div class="new-proposal pull-right">
+      <%= link_to '<button class="btn btn-success">Criar proposta</button>'.html_safe, new_proposal_path %>
+    </div>
+
     <br><br><br>
 
     <% if @proposals.empty? %>
