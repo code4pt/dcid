@@ -28,6 +28,6 @@ Dcid::Application.configure do
   config.assets.debug = true
 
   # Mailers configurations
-  config.action_mailer.default_url_options = { :host => 'dcid.org' }
+  config.action_mailer.default_url_options = { :host => ENV["APP_ROOT_DOMAIN"] }
   config.action_mailer.default :charset => 'utf-8'
 end

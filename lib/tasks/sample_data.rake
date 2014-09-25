@@ -39,11 +39,11 @@ namespace :db do
   task create_admin: :environment do
 
     # Create admin user
-    admin = User.create!(name: "Administrador",
-                         email: "admin@dcid.org",
-                         password: "dcidadmin9!",
-                         password_confirmation: "dcidadmin9!",
-                         citizen_number: "99999990",
+    admin = User.create!(name: ENV["ADMIN_NAME"],
+                         email: ENV["ADMIN_EMAIL"],
+                         password: ENV["ADMIN_PASS"],
+                         password_confirmation: ENV["ADMIN_PASS"],
+                         citizen_number: ENV["ADMIN_ID"],
                          admin: true)
   end
 
