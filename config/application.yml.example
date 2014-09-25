@@ -1,16 +1,19 @@
+## All values to the keys below MUST be inside "quotation marks".
+## For more information about how to configure this file, refer to the figaro gem page.
+
 # Generic
 
-APP_ROOT_DOMAIN:
+APP_ROOT_DOMAIN:  #"example.org" if you will deploy DCID on http://www.example.org/
 
 # Rake
 
-ADMIN_NAME:
-ADMIN_EMAIL:
-ADMIN_PASS:
-ADMIN_ID:
+ADMIN_NAME:       #"Administrator Maximus"
+ADMIN_EMAIL:      #"admin@example.com"
+ADMIN_PASS:       #"adminadmin"
+ADMIN_ID:         #"12345678" your admin's citizen number
 
-# Mailer config
+# Mailer
 
-MAILER_USER:
-MAILER_PASS:
-MAILER_ADDRESS:
+MAILER_USER:      #"YourSendgridUsername"
+MAILER_PASS:      #"your_sendgrid_password"
+MAILER_ADDRESS:   #"smtp.sendgrid.net"
