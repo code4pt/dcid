@@ -1,5 +1,6 @@
 ## All values to the keys below MUST be inside "quotation marks".
 ## For more information about how to configure this file, refer to the figaro gem page.
+## After this file is fully configured, run `figaro heroku:set -e production` command to deploy the configurations to production.
 
 # Generic
 
