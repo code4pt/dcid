@@ -1,5 +1,5 @@
 class ProposalsController < ApplicationController
-  before_action :signed_in_user,        only: [:new, :create, :index, :vote_for, :vote_against]
+  before_action :signed_in_user,        only: [:new, :create, :show, :vote_for, :vote_against]
   before_action :admin_or_author_user,  only: [:edit, :update, :destroy]
 
   def index

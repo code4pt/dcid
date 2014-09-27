@@ -33,6 +33,7 @@
             </li>
           <% else %>
             <li><%= link_to "Como funciona?", how_path %></li>
+            <li><%= link_to '<i class="fa fa-comment"></i> Propostas'.html_safe, proposals_path %></li>
             <li><%= link_to '<i class="fa fa-sign-in fa-fw"></i> Entrar'.html_safe, signin_path %></li>
           <% end %>
         </ul>
