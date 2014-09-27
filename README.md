@@ -15,6 +15,10 @@ Live demo at [www.dcid.org](http://www.dcid.org/)
 
 ### Release notes
 
+#### 0.1.2
+
+- Sort proposals by different criteria
+
 #### 0.1.1
 
 - Show proposals even when you aren't logged in
