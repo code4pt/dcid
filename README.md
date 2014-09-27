@@ -15,6 +15,10 @@ Live demo at [www.dcid.org](http://www.dcid.org/)
 
 ### Release notes
 
+#### 0.1.1
+
+- Show proposals even when you aren't logged in
+
 #### 0.1.0
 
 - Migrated look to bootstrap 3 (still some issues on flash[:alert] and size of form buttons)
