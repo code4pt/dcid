@@ -12,6 +12,7 @@ Dcid::Application.routes.draw do
 
   get   '/tags/:tag', to: 'proposals#tagged',   :as => 'tag'
   match '/tags',      to: 'proposals#tags',     via: 'get'
+  match '/change_proposal_order', to: 'proposals#change_order', via: 'get'
 
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'

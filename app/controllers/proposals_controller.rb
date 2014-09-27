@@ -2,8 +2,14 @@ class ProposalsController < ApplicationController
   before_action :signed_in_user,        only: [:new, :create, :show, :vote_for, :vote_against]
   before_action :admin_or_author_user,  only: [:edit, :update, :destroy]
 
+  impressionist :unique => [:session_hash], :actions => [:show]
+
   def index
-    @proposals = Proposal.paginate(page: params[:page])
+    if params[:order]
+      @proposals = change_order(params[:order]).paginate(page: params[:page])
+    else
+      @proposals = Proposal.paginate(page: params[:page])
+    end
   end
 
   def new
@@ -72,6 +78,28 @@ class ProposalsController < ApplicationController
       format.html {redirect_to :back}
     end
   end
+
+  def change_order(new_order)
+    case new_order
+      when 'recent'
+        Proposal.order('created_at DESC')
+      when 'voted'
+        Proposal.all.sort { |p1, p2| p2.total_votes <=> p1.total_votes }
+      when 'popular'
+        Proposal.all.sort { |p1, p2| p2.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) <=> 
+          p1.impressionist_count(start_date: Date.today, end_date: Date.today.prev_month) }
+      when 'polemic'
+        Proposal.all
+          .select { |proposal| 
+            proposal.total_votes > CONTROVERSIAL_THRESHOLD && 
+            proposal.score <= 0.1*CONTROVERSIAL_THRESHOLD && 
+            proposal.score > -0.1*CONTROVERSIAL_THRESHOLD }
+          .sort{ |p1, p2| p2.total_votes <=> p1.total_votes }
+      else
+        Proposal.order('created_at DESC')
+    end
+  end
+
 
   # ==== Begin of tag-related views
   def tagged
