@@ -3,7 +3,7 @@ DCID
 
 *propose . discuss . decide*
 
-Live demo at [www.dcid.org](http://www.dcid.org/)
+Live demo at [dcid.herokuapp.com](http://dcid.herokuapp.com//)
 
 - **License**: The author [Diogo Nunes](http://github.com/dialex) releases this software under the [GNU GPL 3](http://www.gnu.org/licenses/gpl.txt).
 - **Development plan**: This project is managed using a [Trello board](https://trello.com/b/36itFGvs/dcid).
